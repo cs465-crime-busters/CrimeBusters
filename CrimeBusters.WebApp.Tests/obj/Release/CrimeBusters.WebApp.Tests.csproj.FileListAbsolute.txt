@@ -1,0 +1,8 @@
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\bin\Release\CrimeBusters.WebApp.Tests.dll
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\bin\Release\CrimeBusters.WebApp.Tests.pdb
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\bin\Release\CrimeBusters.WebApp.dll
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\bin\Release\CrimeBusters.WebApp.pdb
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\obj\Release\CrimeBusters.WebApp.Tests.csprojResolveAssemblyReference.cache
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\obj\Release\CrimeBusters.WebApp.Tests.dll
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\obj\Release\CrimeBusters.WebApp.Tests.pdb
+c:\users\jesus\documents\visual studio 2013\Projects\CrimeBusters\CrimeBusters.WebApp.Tests\bin\Release\CrimeBusters.WebApp.Tests.dll.config

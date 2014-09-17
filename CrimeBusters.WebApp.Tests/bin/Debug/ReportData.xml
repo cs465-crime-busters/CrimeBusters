@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReportData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CreateReport>
+    <ReportTypeId>1</ReportTypeId>
+    <Message>Test Message</Message>
+    <Latitude>40.104669</Latitude>
+    <Longitude>-88.242254</Longitude>
+    <Location>University of Illinois Campus</Location>
+    <DateReported>04/12/2014 00:00:00</DateReported>
+    <UserName>test.user</UserName>
+    <Result>success</Result>
+  </CreateReport>
+  <!--No Message-->
+  <CreateReport> 
+    <ReportTypeId>1</ReportTypeId>
+    <Message></Message>
+    <Latitude>40.104669</Latitude>
+    <Longitude>-88.242254</Longitude>
+    <Location>University of Illinois Campus</Location>
+    <DateReported>04/12/2014 00:00:00</DateReported>
+    <UserName>test.user</UserName>
+    <Result>success</Result>
+  </CreateReport>
+  <!--Empty Latitude-->
+  <CreateReport>
+    <ReportTypeId>1</ReportTypeId>
+    <Message>Test Message</Message>
+    <Latitude></Latitude>
+    <Longitude>-88.242254</Longitude>
+    <Location>University of Illinois Campus</Location>
+    <DateReported>04/12/2014 00:00:00</DateReported>
+    <UserName>test.user</UserName>
+    <Result>success</Result>
+  </CreateReport>
+  <!--Empty Longitude-->
+  <CreateReport>
+    <ReportTypeId>1</ReportTypeId>
+    <Message>Test Message</Message>
+    <Latitude>40.104669</Latitude>
+    <Longitude></Longitude>
+    <Location>University of Illinois Campus</Location>
+    <DateReported>04/12/2014 00:00:00</DateReported>
+    <UserName>test.user</UserName>
+    <Result>success</Result>
+  </CreateReport>
+  <!--No Location-->
+  <CreateReport>
+    <ReportTypeId>1</ReportTypeId>
+    <Message>Test Message</Message>
+    <Latitude>40.104669</Latitude>
+    <Longitude>-88.242254</Longitude>
+    <Location></Location>
+    <DateReported>04/12/2014 00:00:00</DateReported>
+    <UserName>test.user</UserName>
+    <Result>success</Result>
+  </CreateReport>
+  <!--Empty UserName-->
+  <CreateReport>
+    <ReportTypeId>1</ReportTypeId>
+    <Message>Test Message</Message>
+    <Latitude>40.104669</Latitude>
+    <Longitude>-88.242254</Longitude>
+    <Location>University of Illinois Campus</Location>
+    <DateReported>04/12/2014 00:00:00</DateReported>
+    <UserName></UserName>
+    <Result>FOREIGN KEY constraint "FK_Report_Users".</Result>
+  </CreateReport>
+</ReportData>

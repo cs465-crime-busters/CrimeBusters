@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LoginData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Credentials>
+    <UserName>test.user</UserName>
+    <Password>test123</Password>
+    <Result>success</Result>
+  </Credentials>
+  <Credentials>
+    <UserName>noUserExists</UserName>
+    <Password>test123</Password>
+    <Result>There is no user in the database with the username noUserExists</Result>
+  </Credentials>
+  <Credentials>
+    <UserName>test.user</UserName>
+    <Password>incorrectPassword</Password>
+    <Result>Your password is incorrect.</Result>
+  </Credentials>
+  <CreateUser>
+    <UserName>test.user2</UserName>
+    <Password>test123</Password>
+    <FirstName>John</FirstName>
+    <LastName>Doe</LastName>
+    <Email>test2@crimbusters.com</Email>
+    <Result>Success</Result>
+  </CreateUser>
+  <CreateUser>
+    <UserName></UserName>
+    <Password>test12</Password>
+    <FirstName>John</FirstName>
+    <LastName>Doe</LastName>
+    <Email>test2@crimbusters.com</Email>
+    <Result>InvalidUserName</Result>
+  </CreateUser>
+  <CreateUser>
+    <UserName>test.user2</UserName>
+    <Password>t</Password>
+    <FirstName>John</FirstName>
+    <LastName>Doe</LastName>
+    <Email>test2@crimbusters.com</Email>
+    <Result>InvalidPassword</Result>
+  </CreateUser>
+  <CreateUser>
+    <UserName>test.user2</UserName>
+    <Password>test123</Password>
+    <FirstName>John</FirstName>
+    <LastName>Doe</LastName>
+    <Email></Email>
+    <Result>InvalidEmail</Result>
+  </CreateUser>
+</LoginData>

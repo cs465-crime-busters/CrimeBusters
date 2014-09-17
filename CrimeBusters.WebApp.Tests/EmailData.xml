@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmailData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SendEmail>
+    <FromEmail>admin@illinoiscrimebusters.com</FromEmail>
+    <FromName>Crime Buster Admin</FromName>
+    <ToEmail>chris.ababan@gmail.com</ToEmail>
+    <Subject>Test email</Subject>
+    <Body>&lt;h1&gt;Hello World&lt;/h1&gt;</Body>
+    <IsHighImportance>true</IsHighImportance>
+    <Result>success</Result>
+  </SendEmail>
+  <!--No From Email-->
+  <SendEmail>
+    <FromEmail></FromEmail>
+    <FromName>Crime Buster Admin</FromName>
+    <ToEmail>chris.ababan@gmail.com</ToEmail>
+    <Subject>Test email</Subject>
+    <Body>&lt;h1&gt;Hello World&lt;/h1&gt;</Body>
+    <IsHighImportance>true</IsHighImportance>
+    <Result>The parameter &apos;address&apos; cannot be an empty string</Result>
+  </SendEmail>
+  <!--No From Name-->
+  <SendEmail>
+    <FromEmail>admin@illinoiscrimebusters.com</FromEmail>
+    <FromName></FromName>
+    <ToEmail>chris.ababan@gmail.com</ToEmail>
+    <Subject>Test email</Subject>
+    <Body>&lt;h1&gt;Hello World&lt;/h1&gt;</Body>
+    <IsHighImportance>true</IsHighImportance>
+    <Result>success</Result>
+  </SendEmail>
+  <!--No Subject-->
+  <SendEmail>
+    <FromEmail>admin@illinoiscrimebusters.com</FromEmail>
+    <FromName></FromName>
+    <ToEmail>chris.ababan@gmail.com</ToEmail>
+    <Subject></Subject>
+    <Body>&lt;h1&gt;Hello World&lt;/h1&gt;</Body>
+    <IsHighImportance>true</IsHighImportance>
+    <Result>success</Result>
+  </SendEmail>
+  <!--No Body-->
+  <SendEmail>
+    <FromEmail>admin@illinoiscrimebusters.com</FromEmail>
+    <FromName></FromName>
+    <ToEmail>chris.ababan@gmail.com</ToEmail>
+    <Subject>Test email</Subject>
+    <Body></Body>
+    <IsHighImportance>true</IsHighImportance>
+    <Result>success</Result>
+  </SendEmail>
+</EmailData>
