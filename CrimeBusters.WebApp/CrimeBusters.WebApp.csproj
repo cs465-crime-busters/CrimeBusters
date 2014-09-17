@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82EE3E33-BDE8-494F-B35F-F2836F13F382}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrimeBusters.WebApp</RootNamespace>
+    <AssemblyName>CrimeBusters.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\documents\VerifyAccount.html" />
+    <Content Include="Content\images\hi.png" />
+    <Content Include="Content\images\lo.png" />
+    <Content Include="Content\images\quad.jpg" />
+    <Content Include="Content\uploads\testImage.JPG" />
+    <Content Include="Index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Services\CreateUser.ashx" />
+    <Content Include="Services\Login.asmx" />
+    <Content Include="Services\ValidateUser.ashx" />
+    <Content Include="Services\UpdateProfile.ashx" />
+    <Content Include="Services\DeleteUser.ashx" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Services\DownloadFile.ashx" />
+    <None Include="Properties\PublishProfiles\ManualUpload.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\100270270402.sdx" />
+    <Content Include="Content\images\ilogo_horz_bold.gif" />
+    <Content Include="Content\index.css" />
+    <Content Include="Content\themes\illinoisTheme\images\animated-overlay.gif" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\themes\illinoisTheme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\illinoisTheme\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Content\themes\illinoisTheme\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Arvixe.pubxml" />
+    <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Scripts\login.js" />
+    <Content Include="Services\Index.asmx" />
+    <Content Include="VerifyAccount.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Services\PostReport.ashx" />
+    <Content Include="Services\GetUserInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DAL\ConnectionManager.cs" />
+    <Compile Include="Models\DAL\LoginDAO.cs" />
+    <Compile Include="Models\Documents\Audio.cs" />
+    <Compile Include="Models\Documents\IDocument.cs" />
+    <Compile Include="Models\Documents\Photo.cs" />
+    <Compile Include="Models\Documents\Video.cs" />
+    <Compile Include="Models\Login\Login.cs" />
+    <Compile Include="Models\Users\IUser.cs" />
+    <Compile Include="Models\DAL\ReportsDAO.cs" />
+    <Compile Include="Models\DAL\UsersDAO.cs" />
+    <Compile Include="Models\Report\Report.cs" />
+    <Compile Include="Models\Report\ReportTypeEnum.cs" />
+    <Compile Include="Models\Users\User.cs" />
+    <Compile Include="Models\Util\Email.cs" />
+    <Compile Include="Models\Util\ContentLocator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CreateUser.ashx.cs">
+      <DependentUpon>CreateUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DeleteUser.ashx.cs">
+      <DependentUpon>DeleteUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DownloadFile.ashx.cs">
+      <DependentUpon>DownloadFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\GetUserInfo.ashx.cs">
+      <DependentUpon>GetUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Index.asmx.cs">
+      <DependentUpon>Index.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\Login.asmx.cs">
+      <DependentUpon>Login.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\PostReport.ashx.cs">
+      <DependentUpon>PostReport.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UpdateProfile.ashx.cs">
+      <DependentUpon>UpdateProfile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ValidateUser.ashx.cs">
+      <DependentUpon>ValidateUser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyAccount.aspx.cs">
+      <DependentUpon>VerifyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerifyAccount.aspx.designer.cs">
+      <DependentUpon>VerifyAccount.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12209</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12209/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;   
+    color: darkblue;   
+}
+
+/* Login */
+body#login{
+     background: url('/Content/images/quad.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#mainLogin {
+    border: 3px solid rgb(0,0,190);
+    width: 650px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #e5e5e5 84%, #e5e5e5 84%, #e5e5e5 84%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(84%,#e5e5e5), color-stop(84%,#e5e5e5), color-stop(84%,#e5e5e5));
+    background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 84%,#e5e5e5 84%,#e5e5e5 84%);
+    background: -o-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 84%,#e5e5e5 84%,#e5e5e5 84%);
+    background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%,#e5e5e5 84%,#e5e5e5 84%,#e5e5e5 84%);
+    background: radial-gradient(ellipse at center, #ffffff 0%,#e5e5e5 84%,#e5e5e5 84%,#e5e5e5 84%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 );
+    border-radius: 5px;
+}
+
+#mainLogin img#logo {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#mainLogin h2,
+#mainLogin h4 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+#mainLogin h4 {
+    margin: 0;
+}
+
+#mainLogin input[type="text"],
+#mainLogin input[type="password"] {
+    display: block;
+    border: 1px solid rgb(170, 170, 170);
+    width: 302px;
+    margin-bottom: 10px;
+    /* round corners */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -opera-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#mainLogin #innerLogin {
+    padding: 15px 25px;
+    border: 1px solid Gray;
+    width: 313px;
+    margin: auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -opera-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+label[for=rememberMe] {
+    font-size: 0.75em;
+}
+
+input#loginButton {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    bottom: 8px;
+    right: 21px;
+}
+
+#crimebusterHeader{
+    font-size: 1.8em;
+}
+
+#loginHeader{
+    font-size: 1.0em;
+    padding-bottom: 10px;
+}
+
+/* Main Page */
+#dashboard{
+    /* background-color: orange; */
+    border: 1px solid darkblue;
+    background: #ffba60; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffba60 15%, #fb9d23 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#ffba60), color-stop(100%,#fb9d23)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffba60 15%,#fb9d23 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffba60 15%,#fb9d23 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffba60 15%,#fb9d23 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffba60 15%,#fb9d23 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba60', endColorstr='#fb9d23',GradientType=0 ); /* IE6-9 */
+
+}
+
+#main header {
+    position: relative;
+}
+
+#main h3 {
+    margin: 15px;
+    color: darkblue;
+}
+
+#map {
+    width: 100%;
+    height: 1200px;
+    border-top: 1px outset black;
+}
+
+#markerPopup {
+    color: black;
+}
+
+#rightMenu {
+    position: absolute;
+    top: 0;
+    right: 29px;
+    color: darkblue;
+}
+
+#user {
+    display: inline;
+}
+
+#user:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    min-width: 100px !important;
+}
+
+span#loginName {
+    font-weight: bold;
+}
+
+#reportsDashboard table {
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;  
+}
+
+#reportsDashboard th, #reportsDashboard td
+{
+    text-align: left;
+	padding: 4px;
+	background: rgb(230, 230, 230);
+	border-bottom: 1px solid #fff;
+}
+
+#reportsDashboard td
+{
+	border-bottom: 1px solid #fff;
+    background: #F7F7F7;
+	border-top: 1px solid transparent;
+}
+
+#reportsDashboard tr:nth-child(even) td {
+    background: #e9e9e9;
+}
+
+#reportsDashboard table tbody tr:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+ul.paging,
+ul.uploadedMedia {
+    list-style-type: none !important; 
+}
+
+ul.paging li a {
+    display: inline;
+    font-size: 10px;
+    width: 14px !important;
+    float: left;
+}
+
+ul.uploadedMedia li {
+    margin-bottom: 5px;
+}

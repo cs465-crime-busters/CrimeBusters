@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="Content/themes/illinoisTheme/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+    <link href="Content/login.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="Scripts/login.js"></script>
+    <title>Welcome to Crime Busters</title>
+</head>
+<body>
+    <div id="mainLogin">   
+        <img id="logo" alt="Illinois Logo" src="../Content/images/ilogo_horz_bold.gif" />
+        <h1>Welcome to the University of Illinois</h1>
+        <h2>Crime Busters</h2>
+        <div id="innerLogin">
+            <h3>Please Log In</h3>
+            <input type="text" id="userName" placeholder="username" />
+            <input type="password" id="password" placeholder="password" />
+            <input type="checkbox" id="rememberMe" /><label for="rememberMe">Remember me on this computer.</label>
+            <input type="submit" value="Login" id="LoginButton"/>
+        </div>
+    </div>
+</body>
+</html>
