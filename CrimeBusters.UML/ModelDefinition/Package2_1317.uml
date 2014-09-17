@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a8a04c6c-d8bc-44ae-ab0d-820698610dcf"
+  name="Models"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="338b20f1-dee7-4a5e-a2f8-b7e18cff8fd9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCrimeBusters.WebApp.Models"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c6f48642-3a88-4099-bf5b-425181484fbc"
+        LastKnownName="Login"
+        LastKnownLocation="Package3_1317.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a26e73ae-999c-4a69-95fa-edc5d63e6793"
+        LastKnownName="Users"
+        LastKnownLocation="Package4_1317.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="30391b5f-4f98-4c4e-b778-6e4bf3c4e504"
+        LastKnownName="Util"
+        LastKnownLocation="Package8_1317.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="529988c3-a80e-42f7-aec3-28a9aa92357c"
+        LastKnownName="Report"
+        LastKnownLocation="Package_1329.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1d85e8d8-5e82-4500-8d28-99023cab920c"
+        LastKnownName="Documents"
+        LastKnownLocation="Package3_1329.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

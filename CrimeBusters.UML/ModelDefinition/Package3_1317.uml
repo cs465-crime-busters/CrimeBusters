@@ -1,0 +1,908 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="c6f48642-3a88-4099-bf5b-425181484fbc"
+  name="Login"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0a9e0939-958f-43bb-a74a-b42446008a1a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCrimeBusters.WebApp.Models.Login"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="f79e04fe-83bc-4a9f-9060-84f2a7af40ef"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="627157a1-7325-4a7d-aac8-46051c4e69c7"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ff4234c2-81de-4b70-8197-b4c368c49121"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="878b052c-d0cd-464e-b42b-d681e2493ffd">
+                <propertyInstance
+                  Id="f63caabc-83c9-4b4b-82b3-5f379b6a2abf"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="917cff60-d87f-4d91-b37e-c8fc1a9c50cf">
+                <propertyInstance
+                  Id="e5b207df-e7dc-44b5-a5f3-3f0ec73d4bc9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9b0467ce-8061-4a39-881a-e4f98afc7846">
+                <propertyInstance
+                  Id="506d331a-6a02-4b89-8673-a0ae11459d99"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a85283eb-ef5a-42e9-a147-3345dd7c879e">
+                <propertyInstance
+                  Id="717b2f45-3ff1-4261-b60a-662d918aa1e9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6a752604-fe61-4c35-a42a-0acb678b79dc">
+                <propertyInstance
+                  Id="a7e0e3ac-87b9-4c3b-bd74-86a7b4029938"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="653cf57e-c40c-4d7a-9c5f-6c434923a594"
+            isDerived="false"
+            sourceEndRoleName="Login"
+            targetEndRoleName="User"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="62bb9958-bc08-49a2-a4d0-111fcf2e93df"
+              LastKnownName="IUser"
+              LastKnownLocation="Package4_1317.uml" />
+            <description>Property User references type IUser.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9753bd5-a3fa-46e0-8783-0f8bc2daf2a7"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b4dc443f-b7d2-4946-b4f3-97cdc64c51bd"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4c329b42-0f9a-4c37-bba9-b3a6f5e1333e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6298ea7c-1ea4-4a89-9ac5-888310fa78c2"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d59080da-59ff-4a47-81e3-d478e1f9a535"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="120ea1f8-5149-45d4-99b7-3bbf1cc7fb3d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0fe9fa6b-5979-40f5-b4ee-83cb33e7a001"
+            name="User"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a3e5316b-0f4c-4ce4-9133-c47685461a54"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3DUser"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4a1ba4c2-c130-40f2-b5ec-b90f18088474"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21d48980-292c-4807-a93a-9413228e3178">
+                    <propertyInstance
+                      Id="29f9ead5-99c0-4ee9-88e6-2c9042b05ce1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a417ad76-a986-42c1-8fba-2d610627a46e">
+                    <propertyInstance
+                      Id="b1c4ab72-8121-4360-bce4-88b8f602dbd0"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d534868e-e038-4908-b539-0c9c266a3858">
+                    <propertyInstance
+                      Id="cc99c2f1-f105-436f-a9ce-41db0e525bb8"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2b8d2e6-26ac-4252-900e-40b01bde99c6">
+                    <propertyInstance
+                      Id="44088125-f7ee-4ec5-8605-f8611d073777"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67124324-4468-4f7a-a779-8734ee4dc5b0">
+                    <propertyInstance
+                      Id="a4ee1167-7e07-4882-8f2d-632e79557d42"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f260f49a-c90b-405e-8aab-9b4090df88af">
+                    <propertyInstance
+                      Id="a3624c55-4960-4319-bc7b-368d25092425"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7a6f1b8-b695-4670-9034-0f9dc634160f">
+                    <propertyInstance
+                      Id="432650cf-80e6-480d-bf0d-f221b45b39dd"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="62bb9958-bc08-49a2-a4d0-111fcf2e93df"
+                LastKnownName="IUser"
+                LastKnownLocation="Package4_1317.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8cb8ccd3-3324-44d0-86f1-5c45c62d360a"
+            name="Login"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ba721906-0e50-495a-b7c3-cf63eb2d8b0c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="54007c93-9c68-4e09-82aa-7ef476e2b025"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c937aeb-d252-4429-a3ec-b137f1018b4d">
+                    <propertyInstance
+                      Id="a2083864-7a62-4122-8cf4-81df7034529d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c978ae3-a2e3-4864-a825-039992fc6d39">
+                    <propertyInstance
+                      Id="9be08bb5-794f-442d-aacc-f6d23979611f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce13efa1-7c49-424e-a95e-838b8ccf3aec">
+                    <propertyInstance
+                      Id="77552815-16f4-4451-98a9-2e7e20a261b5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93e26ded-cb3d-4ff7-a69b-54638cfbd4c0">
+                    <propertyInstance
+                      Id="3a72c866-ef02-4199-b1f5-071886793ed0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e728da5f-f628-4fdf-9672-ad9467aeae69">
+                    <propertyInstance
+                      Id="b39d8394-9d3e-4216-941b-f02d659671ed"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c9a62e3-353f-4673-964f-80f20255cbc7">
+                    <propertyInstance
+                      Id="899133ed-fd12-4e37-b56c-81a358af3d7b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="20773dad-d401-4eb0-b598-9ea530036d0e"
+            name="Login"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="88a3ed87-23e7-47e6-a2b1-f76105030f35"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Users Type%3DIUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a9504a62-2f36-46f1-b33c-cdcb001b0bf2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c23871f5-d946-4f6e-8c3b-182956ed6775">
+                    <propertyInstance
+                      Id="4936b29d-9361-475e-86cb-bc5499dd5fda"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="385d5f67-1bde-464b-9b38-84735f59dff6">
+                    <propertyInstance
+                      Id="1d202952-0a4e-49bd-b5c3-d7e30d9a3222"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6503ebc4-4fc0-462f-a4bc-28e0eed1eb81">
+                    <propertyInstance
+                      Id="51ad16cf-e9ef-4db7-b51a-dfa84c4d8e31"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f18b2eda-282c-49b9-8261-a3c7b4dfb5f6">
+                    <propertyInstance
+                      Id="5d1068fd-0911-44d3-bb2e-77b62cdf2f61"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="382ce8f0-20ec-4d62-8ff7-3d82fcd0c9bd">
+                    <propertyInstance
+                      Id="eb29decb-0899-4a36-88c9-c070a2726028"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="217f90e6-0425-485d-8acf-cb1ea55c2765">
+                    <propertyInstance
+                      Id="3092e000-3e0f-4751-89a8-415ce968f6ee"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d2fa3a65-07c1-4fd2-88cb-c1434ee7ed6b"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="623d2454-30ed-496e-a35e-4629a7ac8c15"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Users Type%3DIUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="62bb9958-bc08-49a2-a4d0-111fcf2e93df"
+                      LastKnownName="IUser"
+                      LastKnownLocation="Package4_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c32cacd3-7168-41b0-927d-c0da4296bed7"
+            name="CreateUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6955350f-78bc-4e30-bee8-aafa0756450c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DCreateUser OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="84d8bceb-5c2b-4213-890e-ca2b91bae31f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcee9a6b-30c6-40cd-b90a-7ba67cd65881">
+                    <propertyInstance
+                      Id="8bdcd550-43f5-40b5-ab7b-1176d2772863"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5787f176-8a76-4872-990a-c05220ccbe22">
+                    <propertyInstance
+                      Id="a4f9d959-efd4-45f8-bd77-4872059fc5d6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="964d67a7-3479-4ad5-9a72-28ba8690bbb3">
+                    <propertyInstance
+                      Id="17f73674-8f4f-4022-a7a2-1913481edb13"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ceadb92-38bb-4343-ba55-d23404ad6539">
+                    <propertyInstance
+                      Id="77c8ec2e-6a74-4dac-a5a9-c1479f572558"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9f91be5-f22a-4389-9d50-9984b7db2138">
+                    <propertyInstance
+                      Id="1b3a2235-026d-493e-8362-f4bc554a02cd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="003fe0e8-e20f-4d68-a949-73d7d8ab2857">
+                    <propertyInstance
+                      Id="34c47642-8425-41c4-a825-f4f0ef371480"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="104cc309-a209-4288-847b-51dfc62cacdf"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="4dd9143a-0b6c-4230-8bb0-628404fd3428"
+                      LastKnownName="MembershipCreateStatus"
+                      LastKnownLocation="Package7_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7af33dfd-f553-40b9-9acf-617f41a0603e"
+                  name="contentLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="96dea8b4-2e6b-43a9-bdf7-2e9e3bda3483"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DCreateUser OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)]) ParameterIdentifier%3DcontentLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7cfa3cf4-096c-4ba4-984b-e4b29e2a25be"
+                      LastKnownName="IContentLocator"
+                      LastKnownLocation="Package8_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5de75f26-191d-42ec-a1f7-d3b064de3fd0"
+            name="SendVerificationEmail"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f2298252-5639-443b-8a13-7de17a9f58d2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DSendVerificationEmail OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cb378d08-9848-453a-88dd-94b43e96fa72"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f20171de-6821-4b8c-aa16-8ec84084722c">
+                    <propertyInstance
+                      Id="20422129-af6b-49a7-b73a-933dd55cc189"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22056b80-2994-4ded-b0cd-c2a25387d9fe">
+                    <propertyInstance
+                      Id="44e60eb4-f5ab-490e-812b-99054155e45b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="354808d6-3b20-43f5-9afc-df3258fcb906">
+                    <propertyInstance
+                      Id="86d8a9bf-8d35-437d-8208-1d99910d7f6b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="492d5f92-f289-4974-b4a4-95d339a4eb58">
+                    <propertyInstance
+                      Id="641815e7-3749-4e8d-8598-9db5590fe199"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="473e0521-d661-4b83-9962-f8bceae2c67a">
+                    <propertyInstance
+                      Id="70c69b7d-dbec-488a-a7a7-590cbff9cb6c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0c468d1-f3b9-4996-8e7d-58f6cdb29f33">
+                    <propertyInstance
+                      Id="45039b95-f89f-495c-9633-2a58064b2ed3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5515456c-f4ab-4ba6-bc8a-c310bea4be7e"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="db72bfaf-9818-48c1-8745-1424f8f45c99"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DSendVerificationEmail OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="CrimeBusters.UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="61db090e-35ec-4a2b-9b23-827634360953"
+                  name="contentLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="16eb42b7-7c9d-4e62-967b-bd1098d1851e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DSendVerificationEmail OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)]) ParameterIdentifier%3DcontentLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7cfa3cf4-096c-4ba4-984b-e4b29e2a25be"
+                      LastKnownName="IContentLocator"
+                      LastKnownLocation="Package8_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b5522140-c807-44aa-bf2a-239e4c9e537d"
+            name="CreateUserDetails"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2ec153f0-1c93-4154-8b7b-2cc1604cf316"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3DCreateUserDetails"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="862a0a3d-1d3f-4d66-9bd5-6d3321aba7ac"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50475482-9334-40c6-ab04-b9a6853b1f00">
+                    <propertyInstance
+                      Id="4cf6439b-7ebd-439e-984e-24956659f6ad"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ae4a3a5-baf7-48f4-8215-d538b11ccab6">
+                    <propertyInstance
+                      Id="2ccba360-b0d7-4c1b-b32b-e44f847187ad"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29ac7412-3171-4528-8716-a1cdabe18dc7">
+                    <propertyInstance
+                      Id="0af561cc-3e6c-4921-a9ca-1fff8ffbc2d7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e91707ef-3402-4f96-b166-a48541a0f7cb">
+                    <propertyInstance
+                      Id="d20e0560-cfa4-4b9c-86b1-db307448c143"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c4703da-f7cc-4c8b-9929-cdd7269f0a33">
+                    <propertyInstance
+                      Id="3e27112e-002c-4a95-bed7-1b62a9f13022"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79ebcf2a-b2a7-47e5-8d9b-f0e4a6d9b25b">
+                    <propertyInstance
+                      Id="c40e90ee-90ba-4305-849d-5d309008c5fb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="ff69c2ff-d7b6-4e4d-b4bb-09b350f617e9"
+            name="ValidateUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4a548ce3-7447-42d2-9d0c-79a5cb6ac185"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3DValidateUser"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="14accc10-8b83-4905-bd1e-384a830c091b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f383e75-7ca8-4a91-af6c-10a2a4707469">
+                    <propertyInstance
+                      Id="0bc044b9-d0d1-41e4-84f1-7ace643bc274"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="382f9690-9a5e-4184-9c0e-00e3c416da8d">
+                    <propertyInstance
+                      Id="ff63e15a-5c46-4de6-af62-b08d5890ce5c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73f9d043-1636-40bb-9afe-479a9b036efe">
+                    <propertyInstance
+                      Id="288f5b16-209f-4617-ac37-e739ab79a10d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d6c2e59-2fb6-41a7-9a1d-9d4f7299b990">
+                    <propertyInstance
+                      Id="1b2fd4c2-94a2-4848-822a-6bb6d2e20417"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab5f5c6b-b748-4ee7-9f2a-9ad6b0d5d5b3">
+                    <propertyInstance
+                      Id="3dd91fde-b7d7-48d2-aec8-d93ebb980f78"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="965c8c3a-4d73-4b12-9c24-bc064997e18e">
+                    <propertyInstance
+                      Id="02fc40f1-6b6d-421c-ba56-4f81accf68f2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c235794-05fe-4215-8779-1f88d0b3e133"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="CrimeBusters.UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6ce91edd-8d2b-4c84-b226-c3b7aaf57c90"
+            name="ShowMeaningfulErrorMessage"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4dd70070-c308-48b9-9c32-f4352e318edb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DShowMeaningfulErrorMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.ApplicationServices.dll&quot; Namespace%3DSystem.Web.Security Type%3DMembershipUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ff8b9f38-5fc4-4cb4-bfe3-17a9506d8403"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ebc49cee-b235-4a19-85fc-7cf4807b19b1">
+                    <propertyInstance
+                      Id="b6d3d1a9-a21b-4f56-b9a6-a3d9a91d30b7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="acdca863-6db3-422e-b80c-ef0efce22d9f">
+                    <propertyInstance
+                      Id="5a9e2bd0-f4e6-49a0-a684-63c3e9609747"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32ff14bc-cc0b-4bfd-96a0-80188700fdf6">
+                    <propertyInstance
+                      Id="ce999f5e-cebc-45ae-a202-c29cdd5ca7a4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b3292a0-0f83-41ea-8df2-066e0f02e6b9">
+                    <propertyInstance
+                      Id="57702de8-482b-4795-8704-585d57f876f7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c4e9e88-4d55-4f24-ab25-a7c98f914644">
+                    <propertyInstance
+                      Id="66a4aeed-6a99-45c6-948c-f4071b521302"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d14ca17-b609-4fa1-a7a1-088b77def04a">
+                    <propertyInstance
+                      Id="bf1b18d7-5bba-409e-b47e-017bea5aa7bc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b9416187-0b36-463d-9737-fdeb85756e52"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="CrimeBusters.UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2bf18e0d-c36a-48f9-b9a0-e6e0d75c8490"
+                  name="userName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="adc187f8-f294-4ace-a05a-6e8b58099b23"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DShowMeaningfulErrorMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.ApplicationServices.dll&quot; Namespace%3DSystem.Web.Security Type%3DMembershipUser)]) ParameterIdentifier%3DuserName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="CrimeBusters.UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b98f713d-9820-4634-8d60-afddab1a351f"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ab6165b3-5a65-4c04-b2bc-747ac28aa289"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3D(Name%3DShowMeaningfulErrorMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Web.ApplicationServices.dll&quot; Namespace%3DSystem.Web.Security Type%3DMembershipUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5fe4030f-00e6-47f1-ad60-ab872b32cb78"
+                      LastKnownName="MembershipUser"
+                      LastKnownLocation="Package7_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1d981b60-2d18-4ba3-a21a-7140170b0744"
+            name="DeleteUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6d3f4fa0-f9bc-4e6e-95cd-2dc4e5d80155"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Login Type%3DLogin Member%3DDeleteUser"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7235557b-b687-457d-bd30-91e854d3bbbe"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4731b880-408c-4eda-aadd-267d644abf97">
+                    <propertyInstance
+                      Id="78c0e888-3922-418a-83a1-4f153216747e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06e4f217-c49b-4fb4-a2a3-5cfc8100fd54">
+                    <propertyInstance
+                      Id="f5371084-ffdf-4fb6-9ea0-905a5c4aaaea"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2531a5ef-ccd6-4e67-b1cb-e8897fc1c066">
+                    <propertyInstance
+                      Id="f637d39d-3a9b-4000-be1d-1f6e03f02aec"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dac03bb-6731-46a6-a22f-d3f0245b3007">
+                    <propertyInstance
+                      Id="5ddb519e-77c2-4dbd-9f31-c98c38b3d1f3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf53202b-8678-4fb9-83d1-ee3d6657b900">
+                    <propertyInstance
+                      Id="741fa1bf-3d34-4e2a-9285-f6c3e416ce26"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f241198-8779-4834-be05-ab1c5297c3fc">
+                    <propertyInstance
+                      Id="07500433-79d3-4369-bd89-01ffecd6c6db"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

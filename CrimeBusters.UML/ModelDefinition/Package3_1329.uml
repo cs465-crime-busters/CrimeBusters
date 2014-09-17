@@ -1,0 +1,2053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1d85e8d8-5e82-4500-8d28-99023cab920c"
+  name="Documents"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ef509d1a-98e5-49d8-9f4b-ac16ba443526"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCrimeBusters.WebApp.Models.Documents"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="957041c2-5eb0-423c-a7f2-af207497c2fd"
+        name="IDocument"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="e4d4427a-469a-4ce8-83b2-70bb155cb10e"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DIDocument"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bcbaba69-ad2b-44fe-b0c7-c4356eca15d6"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="26878c25-822e-4da0-90a0-cbe735715508">
+                <propertyInstance
+                  Id="7ca7b2cb-b394-45cd-89bd-16aabc4917f2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a4f138a6-e157-4d8f-8b50-8b0f15a5dc5f">
+                <propertyInstance
+                  Id="746f3f93-c347-4647-90dd-1227ca5a47bc"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="48dbecb4-36ea-4a50-8c79-718a57337752">
+                <propertyInstance
+                  Id="ddbb5a93-ef37-4dbc-96db-17809309b87f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b0ceeff2-d493-4c5a-a338-2f9ed62eecd2">
+                <propertyInstance
+                  Id="55febec0-9775-402b-adaf-3f120f19e83f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="8e4f9e1f-717e-4402-a973-2e5e78b9a2f6"
+            isDerived="false"
+            sourceEndRoleName="IDocument"
+            targetEndRoleName="File"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4407a547-5a87-4547-91c8-141ff373db72"
+              LastKnownName="HttpPostedFile"
+              LastKnownLocation="Package6_1317.uml" />
+            <description>Property File references type HttpPostedFile.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b656b53c-7f62-4b93-b907-b3ad13a4d0b2"
+                  name="IDocument"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="38d73a9c-72d2-4d50-940a-d35921b862c9"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1aa2faf3-c769-4729-9758-71c70575e58b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="631f7669-6f4c-4ebb-9042-067653c6af87"
+                  name="File"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a9e410b5-dd7b-4107-bfc3-61cfa5f6f876"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ee19fda0-b342-42df-a461-af2a7b0547f6"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="d67dd76b-7199-4f9a-a9e2-31d6d383d46a"
+            name="File"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a7b06026-4208-4c28-ad9c-042bb712b4c3"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DIDocument Member%3DFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="659a5366-922f-488c-ba72-07f569e428b8"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="160e8dd2-5176-49ec-803f-733897a1c5d8">
+                    <propertyInstance
+                      Id="d95698bf-440a-477d-ba55-e3b6c6e59c4d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08327852-bc82-4073-9a03-51976c87e547">
+                    <propertyInstance
+                      Id="b25b8dba-633a-4f3b-9d5a-c68b4584bb83"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2dc52d75-7ca9-4dc9-aa7f-9c814b2d367c">
+                    <propertyInstance
+                      Id="8cd90c3b-390f-4618-89b3-0dd9393c28da"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3f71440-ecc6-4646-8fa3-f126f0ba1eaf">
+                    <propertyInstance
+                      Id="48406866-0472-4e05-9c3a-967fbbd3f589"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="463eeb71-dab5-4ef4-a041-fc6374f08d84">
+                    <propertyInstance
+                      Id="0468dcf7-5ec0-471b-9c10-2ce96efe050b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="654eb3cb-b9b5-4d0a-8b4c-68c1e8717a9b">
+                    <propertyInstance
+                      Id="b7652f04-02d7-4f3e-ac17-ff5b8b0d3d01"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7594fe6e-0d93-4871-857f-4bd1a8afa480">
+                    <propertyInstance
+                      Id="3d795cf9-4801-4415-8c9d-156c98594697"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4407a547-5a87-4547-91c8-141ff373db72"
+                LastKnownName="HttpPostedFile"
+                LastKnownLocation="Package6_1317.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0d3182dc-4d57-480f-8baa-ad33ff655870"
+            name="Url"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7d32c2fd-c456-432b-a7f6-a92939140570"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DIDocument Member%3DUrl"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="732a3201-7ab7-40a3-8047-3afe73c68099"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8af1367f-e4b7-4d3b-adbb-c399bde39f22">
+                    <propertyInstance
+                      Id="c0798614-a963-4415-af79-d14751050eac"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="173b072d-327a-44ec-8154-05b6995373fc">
+                    <propertyInstance
+                      Id="ee50991c-9caf-45a5-9622-b236defab3cc"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4d28411-5899-4d7e-a9f3-c0c927d984d8">
+                    <propertyInstance
+                      Id="6ecba002-0540-4d62-9996-b30f5013bb4f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45c7a431-a157-4529-bcdc-58ceb91d6fed">
+                    <propertyInstance
+                      Id="7d3a698a-c745-409c-97c3-f015cccb13d3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e3f57e5-1378-4041-a376-645997cb8549">
+                    <propertyInstance
+                      Id="5e0bacc8-d1e3-4a9f-b697-229f715acc5c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38459e00-9f95-4bc1-912c-21e6114d7382">
+                    <propertyInstance
+                      Id="d9288a21-7ef7-412c-810c-9f0398433ccb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20bae2f2-cf6c-4d1e-b23b-b93c08d14a16">
+                    <propertyInstance
+                      Id="90160c1c-176b-4c95-af39-843a8cbe6392"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c09eb6bf-3654-4018-b1ce-f57e1cd8c946"
+            name="IsValidFile"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="31a2c298-2d14-4f5c-92db-5afb95a1ba72"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DIDocument Member%3DIsValidFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="547b66bf-1388-44ce-974d-ce27621e2302"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d39d19b-afd9-4f12-aa10-ff20298b59d2">
+                    <propertyInstance
+                      Id="7ff501b8-9232-448c-9653-b1d9e996bb82"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b864d6d1-5622-4da1-b493-3952c9443198">
+                    <propertyInstance
+                      Id="eda3eb8d-2da4-48e3-8396-4e3768f9bd5b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0901977c-598a-4cd4-b311-c4a67301df4d">
+                    <propertyInstance
+                      Id="7f97c5f4-94d9-49d0-a81a-7292fdeb5a2f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99e7fe44-a596-4850-a586-41b6b7b918ca">
+                    <propertyInstance
+                      Id="05a716df-f15f-4e30-a10a-4c509f9e573e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4119f1a4-55f3-4f5c-b3fc-83680f3e81a3">
+                    <propertyInstance
+                      Id="e389b7f0-b0f2-4f06-9f7d-e964f2dc18b6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff51af73-2225-4674-989b-8c066d8579b9">
+                    <propertyInstance
+                      Id="822117fe-d46c-4c45-84b5-3e4bdaad80b4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e73d3ee-4340-4244-8e6c-87c8cae3b276">
+                    <propertyInstance
+                      Id="52a95974-b432-456c-94e1-499706910d5c"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="a4a2336f-6c8a-487f-a4c0-4780bf69d68f"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b0cb9bb0-77c7-4f2f-87dc-074e517ed85b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DIDocument Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="247ec412-5884-4026-9ef3-a560c936b0a0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdc49da3-086a-444d-9435-522c9bab0969">
+                    <propertyInstance
+                      Id="671c6324-b3e9-4ffa-ae91-d096844db309"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3da0ae2-b7a8-46bc-8f01-4a5c30dc45bc">
+                    <propertyInstance
+                      Id="2ed08e24-d38e-4fe9-8605-9d78acea8009"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9758ddd-25a7-4aa4-8818-1f7fc1ae7deb">
+                    <propertyInstance
+                      Id="2b8d5052-4523-4578-8fc0-cf6791b754d2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1783189f-b7f8-44ba-8a25-7983eb03559d">
+                    <propertyInstance
+                      Id="4701e59a-425f-4fc8-91f7-f372030c5def"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5da01a50-cc13-4b0b-ae90-14a04e46ee88">
+                    <propertyInstance
+                      Id="f1fcb20a-e2ca-4ded-a6c9-f7a9d875b617"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30380ec1-314f-4d97-9a93-e8ce08573e06">
+                    <propertyInstance
+                      Id="37ecec6a-95ec-4f36-ae8c-6e087e0ba119"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1b969f12-0452-4ba9-ae86-520b75dbdab0"
+                  name="contentLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c3cbde54-a2cc-49c1-97b8-434c9a244f50"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DIDocument Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)]) ParameterIdentifier%3DcontentLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7cfa3cf4-096c-4ba4-984b-e4b29e2a25be"
+                      LastKnownName="IContentLocator"
+                      LastKnownLocation="Package8_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2c91d158-a6e8-49ae-bdd0-dc1f520f487e"
+        name="Audio"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="72da6834-b7f5-4cd4-be39-40b27f4a71dd"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DAudio"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e541340c-fed4-4922-b435-00c0a1b37722"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f4c9f228-7c2c-4b2c-8861-c3252c536ce4">
+                <propertyInstance
+                  Id="18afd091-84b6-45bf-bb81-e2bf4d64f5a9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c776b903-c969-45c5-88fe-5a5b844a2ded">
+                <propertyInstance
+                  Id="5d77ad33-dc38-479e-9f9c-1e02228dec0e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0fe2a03-8f63-4d38-913d-8f4ab2d65efa">
+                <propertyInstance
+                  Id="5b8237c5-b856-42c6-8d17-c6a9fa738861"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8efacd80-dd2f-438c-bcca-7bf78f90da23">
+                <propertyInstance
+                  Id="fb1740c2-b50f-4c69-9e85-34c972667458"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="acdaeb4b-7f99-4b79-978c-657d711bb05c">
+                <propertyInstance
+                  Id="2887b2a6-845f-45e8-b907-7a24d2900666"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="cceb29d0-cee8-47a1-972c-f7e4ceb82106">
+            <interfaceMoniker
+              Id="957041c2-5eb0-423c-a7f2-af207497c2fd"
+              LastKnownName="IDocument"
+              LastKnownLocation="Package3_1329.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="e7a0f14c-1f62-4a60-8e78-84aea3439aee"
+            isDerived="false"
+            sourceEndRoleName="Audio"
+            targetEndRoleName="File"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4407a547-5a87-4547-91c8-141ff373db72"
+              LastKnownName="HttpPostedFile"
+              LastKnownLocation="Package6_1317.uml" />
+            <description>Property File references type HttpPostedFile.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2657757a-5f3d-49fa-a6e9-a11f3170a866"
+                  name="Audio"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5bd62027-408d-4c1f-ac7f-1c3feb0c6591"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="35e0ee2d-607f-4dfa-bcb1-d30af58bb461"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d766f96-c7b2-4f12-a734-599eda11a9f8"
+                  name="File"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1396bfc4-dc66-4c26-ab1d-a4c939b2ccd1"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="48bb11b2-0a39-4062-a27f-2fbd8fb047ba"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="9dfe5f7c-c3b6-49e8-89eb-c26f05771c20"
+            name="File"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="08cfa73c-8fb6-44b9-a7db-6e663aa68c10"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DAudio Member%3DFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="41b5538c-8581-4c13-bffd-839a01c15a46"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f1b9f26-e3fd-4eec-bd66-13092198f7b6">
+                    <propertyInstance
+                      Id="d9456795-50a8-424d-962b-5a8539685f5d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1edb0596-4492-4271-a867-b49cbb830ed9">
+                    <propertyInstance
+                      Id="2bb5c9ff-7aa0-4ac0-8639-39864fe865fb"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a395ad4-4b46-4166-a3ba-d3f82e3ed36c">
+                    <propertyInstance
+                      Id="f943a2cd-f500-43ba-b800-d1177c3294bd"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0ffcc3f-f237-44b2-81ec-25091362cbb0">
+                    <propertyInstance
+                      Id="7c7945bd-a6d6-403d-bf5e-cc552747ca07"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bec9635-3c40-4869-a16a-53a23d5d2574">
+                    <propertyInstance
+                      Id="d8efb6dd-e673-43ab-9171-f021c5b4ff97"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33ff2aaa-1ae7-4525-b231-1141f2d03175">
+                    <propertyInstance
+                      Id="859dc156-2543-4456-8868-1ffb9039c7b7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e53b76eb-58c7-4b10-8a98-ff3e32cf9383">
+                    <propertyInstance
+                      Id="5be383c3-557e-4d06-b92d-3a94edebd017"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4407a547-5a87-4547-91c8-141ff373db72"
+                LastKnownName="HttpPostedFile"
+                LastKnownLocation="Package6_1317.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="019b64c5-e91e-4a68-9c14-046b56876089"
+            name="Url"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d641f786-fdfc-4804-b4ab-163e84cf53bf"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DAudio Member%3DUrl"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="df10fbd4-01d2-4432-8153-944304f5944b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7edbfe2-26c3-4130-a581-5af5a7552ae2">
+                    <propertyInstance
+                      Id="1ec5bc79-7988-471e-a957-7a7dfd8b6910"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c8e11db-388b-4e16-9d16-587c709eb740">
+                    <propertyInstance
+                      Id="841e271d-9043-4acc-8a5a-ed5f5a53d334"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c55c14b-e8b5-4597-8f62-0fea06f4c839">
+                    <propertyInstance
+                      Id="26d25c3e-d4fd-403e-bdfa-f77777a58511"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f0f785d-35e3-40bd-8af3-631d0178783e">
+                    <propertyInstance
+                      Id="b517babc-bb89-4f48-9df8-963c736b8a3a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00099845-e068-46f8-a7fe-4c75c61c182d">
+                    <propertyInstance
+                      Id="4cd29b41-ea2e-4c03-bbfa-182a6655ca6e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0fd2fbdf-820e-41a9-8a03-c25e9c4bc270">
+                    <propertyInstance
+                      Id="6d1aea7c-f123-4e66-9e0c-764b4768ba93"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="beae896a-4bd5-4a24-a9d4-141ec844b5da">
+                    <propertyInstance
+                      Id="38aa3c1d-81b0-495d-aaaf-93703f818492"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e7d8cd6a-c8c8-4b73-9ed3-f4811934b94c"
+            name="IsValidFile"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b30408c8-9193-4a2a-aeb5-9aa8df1ad46a"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DAudio Member%3DIsValidFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9d54ef0d-4177-407a-a3f0-32c7de23cb56"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7adf6110-3e62-4c7f-ae08-0b26e5e94142">
+                    <propertyInstance
+                      Id="3cf56a96-d413-4bbd-8964-7d1ffe32cb27"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0535581e-6272-4e41-94de-d5bec2a598ca">
+                    <propertyInstance
+                      Id="c65eed97-dc07-4af9-a384-9b561490a3b9"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5e3a5bf-4136-4803-90b9-ee2ce9c7275c">
+                    <propertyInstance
+                      Id="db96ec6c-620b-4dd5-a524-bce45cc641d5"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc4fee47-e487-4916-9c56-4eb0561d7bc7">
+                    <propertyInstance
+                      Id="53fc1474-dc46-4180-9e51-4c974e924cff"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d98ba208-1c5b-48e3-96b2-488206621c6e">
+                    <propertyInstance
+                      Id="8a44a52c-902c-464c-96ca-242108177d91"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="911c61a0-39f2-45d3-919b-6e00bb7ded0d">
+                    <propertyInstance
+                      Id="734c2223-ae95-40d2-ac8a-39e27adc0298"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55c687ba-99d7-4d38-825b-79a7e6b4f459">
+                    <propertyInstance
+                      Id="9313e191-cc63-44d1-9e0e-0a14817b9ff6"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="63a9a848-66fb-46e2-b474-22774b095b65"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4b077ec9-55f1-4c25-b79a-6ce2d03315ba"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DAudio Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c3396d33-7821-4e2a-9ff9-b185f1377ef3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c33612b5-6b78-48a9-8306-31b3917b9b1d">
+                    <propertyInstance
+                      Id="a4697252-6c28-4978-828e-f5d42d943c03"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6479214-2990-4e99-8766-2c6697f2a1c0">
+                    <propertyInstance
+                      Id="e7449f75-87f9-4170-ac97-c578d5741bd1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1aa71940-dc76-4a63-a599-4bc67f6c5076">
+                    <propertyInstance
+                      Id="410db1c3-c053-4a04-8be4-fad74ad9cdfb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab4c5205-fdc2-4533-a898-49597305236e">
+                    <propertyInstance
+                      Id="1dfc74dc-b859-4660-9288-5f07467f5781"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1997a1c-d52f-48b8-8891-e5ea626c8840">
+                    <propertyInstance
+                      Id="3852f68c-18d8-4335-b6ee-72441a3add66"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85299919-d2ef-464f-9e5d-a4a9955839f7">
+                    <propertyInstance
+                      Id="8731ca48-c48e-4007-9751-d37ec8e61c31"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ac1eaaa-b1c0-4966-b312-7f0d7edff236"
+                  name="contentLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b28c88eb-dda1-42d1-9786-6e6b5c207240"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DAudio Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)]) ParameterIdentifier%3DcontentLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7cfa3cf4-096c-4ba4-984b-e4b29e2a25be"
+                      LastKnownName="IContentLocator"
+                      LastKnownLocation="Package8_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="619c1d87-a463-4a16-af25-e0854ebd9f3f"
+            name="Audio"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8e2fcb79-8c22-4265-b064-a76ece4ddd1e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DAudio Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bc37dc7a-627b-43bf-87e8-3cadaca787be"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="143f82a7-2361-4234-bd98-07b082bcc490">
+                    <propertyInstance
+                      Id="9e6ee4a7-904a-4d0e-8370-dd772a7b234c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5fd623fa-163b-4251-91f5-cb79b9c6b8c2">
+                    <propertyInstance
+                      Id="f9734acd-e933-478f-9b97-21ac68617450"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bee75aa7-598d-4ce1-aa75-75012b1bc7a9">
+                    <propertyInstance
+                      Id="bd383bf2-c2f0-491b-86c5-641b8a15291b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff12fd58-1b85-4f72-9ff5-aef04bf3592b">
+                    <propertyInstance
+                      Id="05bcf8c4-012b-4537-ab61-09542929c24a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35f47ea3-f25e-4495-a225-61169237a554">
+                    <propertyInstance
+                      Id="4f37d333-e6bd-4b21-bd11-1adabcb7b40c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f99a7a6-6948-4805-a4c3-855e5f1ea6e3">
+                    <propertyInstance
+                      Id="e58c1b72-ca31-4d33-92f1-1e1a63e592c8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8e2b253f-21d2-48a5-aa8f-cdb4bfa60cc5"
+        name="Photo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="521e6483-2168-473e-90f9-d9396da18d07"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DPhoto"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="35605652-eaad-4ecd-8124-e6fdee48f2d1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d55aca5f-9865-4073-b31e-96ff4daeff43">
+                <propertyInstance
+                  Id="ee28f808-2023-4073-9d0d-1a57efe1697c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f74a2591-1a86-41a4-a6ba-1a08dd2f7b12">
+                <propertyInstance
+                  Id="781d108b-d03a-400b-b6c6-c67fe0c5df23"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7c6fa583-64af-4398-a8dc-b8eafea2ca37">
+                <propertyInstance
+                  Id="85690816-9029-4ff3-b70f-54e00a8f6e29"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92cee850-04d7-425c-886b-1b56de5a7209">
+                <propertyInstance
+                  Id="26f1894a-f3e5-4ed3-aec7-4c57c8f2969a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dada1cbb-66c6-4ab5-a2db-bfc8f2aac7ad">
+                <propertyInstance
+                  Id="6be1d559-490d-49c4-ad9c-3ac47ef6910a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="cd732177-758d-4f31-8852-52719b952562">
+            <interfaceMoniker
+              Id="957041c2-5eb0-423c-a7f2-af207497c2fd"
+              LastKnownName="IDocument"
+              LastKnownLocation="Package3_1329.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="ce0e4e72-2069-4a1b-ba1a-33bbe28c1fd7"
+            isDerived="false"
+            sourceEndRoleName="Photo"
+            targetEndRoleName="File"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4407a547-5a87-4547-91c8-141ff373db72"
+              LastKnownName="HttpPostedFile"
+              LastKnownLocation="Package6_1317.uml" />
+            <description>Property File references type HttpPostedFile.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ea6e922c-382f-4120-923d-4ee6d4652d93"
+                  name="Photo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f5814405-736c-4ec2-a0c8-bb4f9d5f121a"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d8fc1c07-6d48-4b2f-9a66-3528ef5c39df"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12d367c4-44a7-4841-8bcb-39bebb32fb7b"
+                  name="File"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b54989ac-d538-4dca-ba66-9efdb964a02c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="92fdde44-07ac-4615-ad09-0575ddb4df96"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f01939d1-fdd0-4998-ad49-bc2d9964715d"
+            name="File"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="14e56059-f284-4807-be36-1846bf948586"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DPhoto Member%3DFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8874ff52-6496-40c7-86d3-e9f9bd78c210"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0adbc52e-6d37-47ef-8619-422641d9a348">
+                    <propertyInstance
+                      Id="53dfae96-288c-423e-93de-a8915823c9c8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41d74089-9a69-4b35-8f98-63cff1598a92">
+                    <propertyInstance
+                      Id="f060f9b0-df5e-4019-8364-2a6dfd9e94f7"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="feab7656-6e8c-442c-a0b2-6c25da463b05">
+                    <propertyInstance
+                      Id="dade2678-545f-4853-995f-8745f0be267d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cff5a53b-adee-4682-921b-b6b87007aa2f">
+                    <propertyInstance
+                      Id="efc30e7a-fb49-4cf0-9c21-8b6f5c9f63be"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f267d697-0cb1-4b56-9980-aee2051e57ab">
+                    <propertyInstance
+                      Id="648fbf87-74d7-49a3-9009-cad0aad2e97d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9b27b32-fa68-4f13-87e4-7705ac0c1875">
+                    <propertyInstance
+                      Id="f6f665a9-0dae-4920-b29f-1bf06e4f2df1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f7f0bdd-d7e6-4a8f-a813-c79e47d0a75c">
+                    <propertyInstance
+                      Id="11d6ecdf-4b1e-4f25-b93a-a1d6e38953bb"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4407a547-5a87-4547-91c8-141ff373db72"
+                LastKnownName="HttpPostedFile"
+                LastKnownLocation="Package6_1317.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7f9e36e1-96e1-47f0-a463-b10aacdbe1e2"
+            name="Url"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="27299564-31ba-404e-a8d8-1470b0241a5a"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DPhoto Member%3DUrl"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a07ac95b-4e1a-4613-ae45-59743cb16b5e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5191a233-fb85-4b0d-9780-ac068024a4d3">
+                    <propertyInstance
+                      Id="2ee1e092-9f98-40c2-917c-0b8b9b6af54c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97fd0883-b322-406f-997d-6e4536512cbe">
+                    <propertyInstance
+                      Id="24075d39-48f8-444a-9fa2-b893128acc22"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55f48d18-7e0f-4ed3-9a1e-e801afc41737">
+                    <propertyInstance
+                      Id="d6d28ec0-a7fc-42df-92b1-5dd02fee02b1"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39f9dde7-8e98-4175-b5ea-38276efdaca2">
+                    <propertyInstance
+                      Id="4b80faf3-b45b-4e6d-b91a-78a1f50bf532"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a2de64c-c642-47b4-bada-1a67a352780b">
+                    <propertyInstance
+                      Id="5d546c85-a8b7-4830-a9b5-21baa96a9d0a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ff71184-1e92-4605-858e-cae2db593276">
+                    <propertyInstance
+                      Id="7089550e-2654-4fd3-8680-27f18a91a33f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07c91da4-1ff7-4ae1-a868-71e8dae55213">
+                    <propertyInstance
+                      Id="f9765d3e-a1ec-42d4-b5e9-c2bf51873750"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fa6a1181-d277-461d-ba0c-b1f79d6b302c"
+            name="IsValidFile"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b17b4eb8-4884-4798-81b3-f4ad4c600f58"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DPhoto Member%3DIsValidFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="afa365f0-bc43-4be7-9b0c-87e69d0215ca"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71892b28-1bb0-423a-aebc-64276740a5ff">
+                    <propertyInstance
+                      Id="8a314f7d-4932-4b1d-b482-05f080e042e6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f165def-4608-4c8b-be34-76d24c56a3b6">
+                    <propertyInstance
+                      Id="f8fb13bc-e44f-4509-ae26-6b8628eaecf1"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45d7d8b4-172a-4bd6-9e02-6bc5c0342089">
+                    <propertyInstance
+                      Id="989286af-7123-4e40-900b-a35b9334b035"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a128ca6-46ac-4fea-9914-36cf146ee52a">
+                    <propertyInstance
+                      Id="b61f5ed1-9b0a-47f9-a306-cc0e3c07867f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9167d9d-12b0-42e9-bab2-4914f63ecb8d">
+                    <propertyInstance
+                      Id="30fc8073-eeb6-4196-a2f2-478a97f2d42a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83322fee-a0fc-4ae3-8a24-fe8488ac63da">
+                    <propertyInstance
+                      Id="85fc3739-ab6a-42df-870c-b08074df22ce"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20bc2b71-355e-4f3e-b186-03b21cc28aca">
+                    <propertyInstance
+                      Id="49619c2f-dd82-42c4-9002-ee42aa672efc"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="407805ad-ad80-4622-bfa5-2acfb5a08eab"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1adc8da0-9447-4fde-a640-f3389cc92a66"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DPhoto Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9a24f18b-b70c-4b37-8fb8-593b11b0001a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c974e1f-4f8d-4b68-94d2-5c71f7de9fd2">
+                    <propertyInstance
+                      Id="f70bca3f-4901-4d18-a58b-92ffbb558864"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92de3d79-1d3e-43f0-9745-bf70fd6fad55">
+                    <propertyInstance
+                      Id="8f86538e-7413-4080-b236-f4fd6d12e3c2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed6aef64-036d-4a6f-8647-898bdb303bea">
+                    <propertyInstance
+                      Id="4eba6811-e683-4f2f-97fb-0112ac962c48"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c11fd113-b473-4c8e-846b-931f4751ed66">
+                    <propertyInstance
+                      Id="2b1df8b9-589f-42a0-9646-fcf51ffd8e0d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cac4b5bc-9c63-4c83-b17c-29f2c111c7c1">
+                    <propertyInstance
+                      Id="62b8003e-f2db-4c5b-aff7-5fcb6d44cdea"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4feee9b7-e80d-4591-b6e3-f4060f66eb14">
+                    <propertyInstance
+                      Id="cade3d80-06a7-4961-bb8e-b7a4118064a1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b314289a-3987-4b40-b539-f72a218a43b9"
+                  name="contentLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="adde6638-5301-4154-b491-f69f1c7dbb06"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DPhoto Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)]) ParameterIdentifier%3DcontentLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7cfa3cf4-096c-4ba4-984b-e4b29e2a25be"
+                      LastKnownName="IContentLocator"
+                      LastKnownLocation="Package8_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6da7ad00-831c-45e2-b006-e1fa36adc21f"
+            name="Photo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9c80c9c0-f8c4-4341-9b61-c7418e4fd3cf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DPhoto Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a261c03d-c3c4-45e3-be89-d7ec8c9bb349"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b940289c-ee86-45c4-aa30-3013f448ae1e">
+                    <propertyInstance
+                      Id="a67da6e2-757d-4164-a9cc-4893e9dcbf0a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="121dfc58-3c07-4d75-b065-55b1b066e76d">
+                    <propertyInstance
+                      Id="5882ee97-fa3b-4880-887d-6a352e22702c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6dcc79a-d219-493a-a1ad-1bb31412ab64">
+                    <propertyInstance
+                      Id="5c5aa5ad-dc10-4469-9d95-1893c59fe1d5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ae449ae-b47c-4732-b1cc-9a1ec8c9692c">
+                    <propertyInstance
+                      Id="aecee74b-db25-4ccd-a360-2728df69c0e8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f02701f-3b18-4b1d-88b7-a8abea369c46">
+                    <propertyInstance
+                      Id="9aa414a8-bc3b-4e0c-b4a2-5299cc157608"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2260c46-088e-44c5-a802-dda19761b432">
+                    <propertyInstance
+                      Id="50d7ccc3-a54a-4b25-a7ec-06bb7c523a0a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c1319a1f-1376-4dc4-bb1a-35ced1d6ab8d"
+        name="Video"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="823d8a8d-60e4-4331-aa53-ea8665f6c78a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DVideo"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6f1002e3-f0fd-4e85-859e-82dfed97fed9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d8d5610-49c5-43c9-a574-fc5f4f449d6d">
+                <propertyInstance
+                  Id="fa2486b4-a387-42e7-9252-85f6de19a3a4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="71faaa5f-2a38-4fe8-a9ce-3a39eb78fcfc">
+                <propertyInstance
+                  Id="6ee30a6e-b3c2-4d58-ae96-76033dcf0ae3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="29b7644f-9c5a-468e-9fbf-83ec2b291c9d">
+                <propertyInstance
+                  Id="18e649a0-5a7a-4361-b94c-98e888a382fe"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="65615900-973e-4b9c-bae4-b7684fbb095c">
+                <propertyInstance
+                  Id="34944398-b81f-4a1c-ad0e-2bf8be39c9f1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0937b613-5a5f-4571-a304-da5e050199d6">
+                <propertyInstance
+                  Id="14f00452-5320-4a0b-9963-2393e8959a9b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="90f7c1bb-a4c6-48be-adc5-71a29154e811">
+            <interfaceMoniker
+              Id="957041c2-5eb0-423c-a7f2-af207497c2fd"
+              LastKnownName="IDocument"
+              LastKnownLocation="Package3_1329.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="36732cfd-24a4-4282-af32-b7a38ea42172"
+            isDerived="false"
+            sourceEndRoleName="Video"
+            targetEndRoleName="File"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4407a547-5a87-4547-91c8-141ff373db72"
+              LastKnownName="HttpPostedFile"
+              LastKnownLocation="Package6_1317.uml" />
+            <description>Property File references type HttpPostedFile.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df7c09fa-59c0-4673-9678-9840c375e295"
+                  name="Video"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c04442fd-6e70-4197-9b20-0aa5fe9bdef0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d197e247-b76f-4772-af5e-cf03848714e5"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4761c75-21d8-4112-b9b8-6f9bd798cab0"
+                  name="File"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="412618d8-72cc-4b38-a4b0-7c7536ae64a7"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e4ca5d8a-8399-481e-9f6c-4e0072d408ac"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="db0b80e2-5dd6-49b7-b3e1-ecde22a8c527"
+            name="File"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8fdd063b-d628-472f-b9e3-1fb5db33b07c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DVideo Member%3DFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eaa8267e-fa95-49f1-a540-eb0e9c00d887"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44a9135e-bc62-4661-b428-d06fa2885dd6">
+                    <propertyInstance
+                      Id="f1ceaf30-bea8-408e-a338-1f7c6b53a696"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8acf982e-34bc-4c15-a969-5e9dd341a25c">
+                    <propertyInstance
+                      Id="7a6514a1-22af-4bf9-9cc2-69716a68efde"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e386777-b289-4753-a7e8-8c567d7b3fd1">
+                    <propertyInstance
+                      Id="a7261be8-65ef-455a-a8d8-f9f2d946b06d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fef9c3a3-a23d-498b-ad0e-77d8a8eae65a">
+                    <propertyInstance
+                      Id="0bd8e508-109d-4a7f-b23f-2251af7a4dea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11e5652f-c2cd-42b3-af35-572361200ba0">
+                    <propertyInstance
+                      Id="c9429859-5f46-43c3-899c-edd636494cf6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70ea91fd-8103-4884-b688-8fb8982f5527">
+                    <propertyInstance
+                      Id="92973a8d-ac8b-4f4c-b193-253bf776249f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="774dccf7-4909-4ca4-bb4b-7dcdd4f844df">
+                    <propertyInstance
+                      Id="301ffc19-7c67-49ba-9cf8-38d70173561d"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4407a547-5a87-4547-91c8-141ff373db72"
+                LastKnownName="HttpPostedFile"
+                LastKnownLocation="Package6_1317.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="276d4fde-710e-4fdf-90e0-c40f4f58e379"
+            name="Url"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="255e6578-ecc2-4040-b614-9db90bd94801"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DVideo Member%3DUrl"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4487f38c-53d2-4673-8a26-d27f0ce03083"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b5756ea-efaf-44ce-a309-2ccb78a6ce4e">
+                    <propertyInstance
+                      Id="8a344008-f77d-4f96-b83e-483a8f2bd697"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27904f13-dfb0-4dc4-88a0-3143ad1653aa">
+                    <propertyInstance
+                      Id="5be6ce9a-5e22-445d-946c-ceb385be36f6"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2600833-42ee-4e7f-96e0-e86631081749">
+                    <propertyInstance
+                      Id="589b767b-bb6d-4267-87e2-8e4546844186"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e78e4cd7-3abe-471d-bb96-cc219340fdf3">
+                    <propertyInstance
+                      Id="36fd12df-0248-4c66-a56d-401d029baa5a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e28ace22-da96-4860-8547-5f007cc6dc9a">
+                    <propertyInstance
+                      Id="5629d7ff-71c9-4a23-9f77-1ff62b29feef"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b1fd33f-994d-429b-ad42-d5b463245a78">
+                    <propertyInstance
+                      Id="5ca8510d-2b03-4497-b85a-e6113b6436e5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4814e89f-df9b-4b91-9447-a011d5752b0c">
+                    <propertyInstance
+                      Id="f4656d91-bffe-4340-959a-0ba37ed7e724"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eb9ddce1-3ac3-4222-9971-3fa61703bc5c"
+            name="IsValidFile"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6cf071e1-d436-4266-b1b8-c75542ade2ec"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DVideo Member%3DIsValidFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b04bbc02-bd3f-4be0-82e6-9eb4e975a5a3"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d57c31ff-711b-40a4-8410-c3064c45e0c1">
+                    <propertyInstance
+                      Id="3364ef9e-93fb-4867-a767-5956d857821f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a266f56-6043-4ad8-98ad-17fd2b94ddcb">
+                    <propertyInstance
+                      Id="e1b7d27d-a552-4066-a5e2-b095603e9922"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dff443c2-9417-4d13-831c-066619df3d2d">
+                    <propertyInstance
+                      Id="98b2f808-1689-4b91-bfc5-5b75b03adf13"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3b40300-522f-48a6-b247-ecf877b1795d">
+                    <propertyInstance
+                      Id="0869015c-730c-4e82-bdcb-083a401438d5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2711a4f9-d5bf-4f65-947a-5b34b8c5d94c">
+                    <propertyInstance
+                      Id="55efca8e-0dfd-492b-a9ce-6a24ca3ad64c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d64ef37d-246b-4fb4-bc31-e5ef1b00fe13">
+                    <propertyInstance
+                      Id="6770f95d-5bc2-470c-a364-c99ca426e114"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9c2a4f4-c6dc-4a5d-bac7-4c3f2ed0ffe1">
+                    <propertyInstance
+                      Id="4aa55935-09d5-47c0-91a7-6aefff0f1968"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="CrimeBusters.UML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bfe89154-0f2d-4111-b287-2f8223fe6dc8"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="203c564c-7f7e-42d4-b2fd-ca72f91cba7a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DVideo Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b58d4995-4283-4461-bf3e-7c301d78c58a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22b5eec8-5126-4d9a-a5c2-c3c5f08eaba5">
+                    <propertyInstance
+                      Id="8b760a47-71fd-4122-9bb1-70c0e9ac20e5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e379e616-75f8-4241-bf25-0522c6024a98">
+                    <propertyInstance
+                      Id="c9e4c0ab-a96b-4cc4-8fc9-e4b47370faea"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8068772e-ef0e-412c-817d-bfca435b0bfe">
+                    <propertyInstance
+                      Id="3dabbb6b-a39d-45e4-a40c-a9fefd0e0c49"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3e83f45-8339-4e40-a131-2289cb990428">
+                    <propertyInstance
+                      Id="416e3e55-2a7e-4226-8b74-db5aa1c29e25"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4e59043-f7ad-4640-93f0-eefdfe9d6bb5">
+                    <propertyInstance
+                      Id="c0f809e0-7436-45ee-b078-1eea0e741a2d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fae2a3d-629d-44ef-9e36-d9719f952a1e">
+                    <propertyInstance
+                      Id="65c0908c-7878-46d2-8694-ce039c2c7113"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="494da35b-1f41-4433-882d-e39ccba7e872"
+                  name="contentLocator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="77f750a9-cbc1-41df-812a-5c2ee9690a07"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DVideo Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Util Type%3DIContentLocator)]) ParameterIdentifier%3DcontentLocator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7cfa3cf4-096c-4ba4-984b-e4b29e2a25be"
+                      LastKnownName="IContentLocator"
+                      LastKnownLocation="Package8_1317.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c0081292-875e-4d65-b5a6-f92c03cf2bee"
+            name="Video"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7c6beb61-0bed-4d77-b800-a6f569be9b62"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FJesus%2Fdocuments%2Fvisual studio 2013%2FProjects%2FCrimeBusters%2FCrimeBusters.WebApp%2Fbin%2FCrimeBusters.WebApp.dll&quot; Namespace%3DCrimeBusters.WebApp.Models.Documents Type%3DVideo Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="232457f4-cd29-4b18-bce8-775098a3a741"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f22a302c-4a57-4c4b-b6f6-e2f50aa62209">
+                    <propertyInstance
+                      Id="1a186457-cbf7-4e19-ba68-4b571edec462"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7609048-0ccf-4887-8b9a-2d8a39847400">
+                    <propertyInstance
+                      Id="2de093ae-8d99-4178-b39e-bfe87649c970"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f0b0b7a-8b4a-468a-bcef-26fb9c9a9df9">
+                    <propertyInstance
+                      Id="a9271f92-6c34-48c5-a2f2-b42454262aa7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c230ce7-91a7-4532-919d-8bb76b0f25b4">
+                    <propertyInstance
+                      Id="9da33b41-2ed2-4779-b18f-a95f1ad4be5b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24b4364b-8d9b-4799-804e-25ff9abad17c">
+                    <propertyInstance
+                      Id="1d5c727f-b5df-49ca-a547-2933c2777800"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f5cbdfc-1af5-4b74-9196-7e6053fe027c">
+                    <propertyInstance
+                      Id="8333789f-4e64-4f50-89fb-d8d11292d41e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

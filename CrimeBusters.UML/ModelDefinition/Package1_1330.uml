@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6185c767-e41d-495d-9db3-22837ee70be2"
+  name="Mail"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0d7dc49b-605d-4806-b76a-5e3947da050e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Net.Mail"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ef082b13-1222-44ec-8ba9-d617444dd47e"
+        name="MailMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9adfbe79-330b-4bbc-b396-f37b22ddaae3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Net.Mail Type%3DMailMessage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5224bb01-d458-4c33-b2f7-50f6cdd0f528"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3429c7b1-2dcc-4ba9-b66c-8dbf05f78677">
+                <propertyInstance
+                  Id="57bfef7f-c0cb-45d0-b81e-4c89fac3233b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a891316-ad69-4f2b-8c89-3603de8dccc7">
+                <propertyInstance
+                  Id="f9f64a98-e301-4d24-bb01-f671042b79d7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06462aa6-e3dd-49cb-a751-48f54f67f51a">
+                <propertyInstance
+                  Id="1ce08e8a-0d47-4542-aea8-a80a4fce25af"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bf502670-8b41-4548-b2d0-5dd37af9add0">
+                <propertyInstance
+                  Id="9cfcfab0-a7d4-49e6-ab23-c814aec62cdb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b1dc4e71-be11-4196-baf5-9ff7775b91dc">
+                <propertyInstance
+                  Id="6715027e-e8ee-4b37-8ec0-8ae02c49a71d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f720c540-e5ef-4d59-a129-87db882a7908"
+        name="SmtpClient"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0f530a58-4c90-4dc8-be3c-a6e12cf25ebd"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Net.Mail Type%3DSmtpClient"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7b447b21-3f82-4a49-95ef-74275cf391ad"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb4e7955-2b66-4e04-831f-1eeeb34e4eab">
+                <propertyInstance
+                  Id="d1a49917-529e-4fdc-a2c4-2ac45a4b3ac9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7242cbb8-b1b2-4556-823b-a24fd6ffb183">
+                <propertyInstance
+                  Id="4de25fec-bfe0-44ab-8042-ed8dda09c134"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cab4d35b-0411-451a-8f83-a968f6cf7391">
+                <propertyInstance
+                  Id="917a6450-54d8-4c2d-a3dc-eb1a84baf621"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a856d2b6-7d2b-4050-b432-803b7f99df54">
+                <propertyInstance
+                  Id="134209ec-00f5-4fce-b1b1-4fdd74a9cc3a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="237cb55c-b4b5-494b-a9cb-31bc44b10b26">
+                <propertyInstance
+                  Id="251d72a5-d025-475c-8b1a-4b5489f72510"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="697dc13b-0260-4b31-a6a9-a8aa379680a7"
+        name="Attachment"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4e05b31a-2daf-435e-947b-5753315ae1cc"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Net.Mail Type%3DAttachment"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bfe96820-1627-49e3-b93f-a1b8cee6d152"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5efb5643-4ed8-4a07-b9b1-db662a770736">
+                <propertyInstance
+                  Id="fbc1d41f-5756-47f8-bd88-50e404e38d67"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c7484ac8-ce85-45c6-87b0-5a2243c6bc6c">
+                <propertyInstance
+                  Id="7bbf8182-6bf7-49f3-98ed-1d71a3b2a9be"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6e39d13d-8211-41aa-90fc-8ab598867be4">
+                <propertyInstance
+                  Id="1396100a-7e60-4d39-b840-0b76e9271dc7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fadec67d-7e38-4dc8-a359-ae0a97d38f2c">
+                <propertyInstance
+                  Id="c13fa292-3e5b-42c6-aa29-c58496a36d2f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ba30017-0df8-48b6-9a01-426dd2529167">
+                <propertyInstance
+                  Id="351a00c1-7213-46ef-a923-b50c570544ab"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
