@@ -17,7 +17,6 @@
                 <h4 id="loginHeader">Please Log In</h4>
                 <input id="userName" type="text" placeholder="username" class="required" />
                 <input id="password" type="password" placeholder="password" class="required" />
-                <input id="rememberMe" type="checkbox" /><label for="rememberMe">Remember me</label>
                 <input id="loginButton" type="submit" value="Login" />
             </div>
         </div>

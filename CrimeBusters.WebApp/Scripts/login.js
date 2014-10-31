@@ -26,22 +26,21 @@
         e.preventDefault();
         var userName = $("input#userName").val();
         var password = $("input#password").val();
-        var rememberMe = $("input#rememberMe").is(":checked");
-        $.validateUser(userName, password, rememberMe);
+
+        $.validateUser(userName, password);
     });
 });
 
 (function ($) {
 
-    //validation of user login given the username, password, and if they want be remembered
-    $.validateUser = function (userName, password, rememberMe) {
+    $.validateUser = function (userName, password) {
         $.ajax({
             type: "POST",
             dataType: "json",
             timeout: 10000,
             contentType: "application/json",
             url: "../Services/Login.asmx/ValidateUser",
-            data: JSON.stringify({ userName: userName, password: password, rememberMe: rememberMe }),
+            data: JSON.stringify({ userName: userName, password: password }),
             beforeSend: function() {
                 $("input#loginButton").val("Logging in...").attr("disabled", "disabled");
             },

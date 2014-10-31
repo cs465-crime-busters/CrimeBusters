@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.Services;
@@ -24,11 +22,10 @@ namespace CrimeBusters.WebApp.Services
         /// Validate User login and set authenthication cookie and returns error message if not policemann
         /// </summary>
         [WebMethod]
-        public string ValidateUser(string userName, string password, bool rememberMe)
+        public string ValidateUser(string userName, string password)
         {
             if (Membership.ValidateUser(userName, password))
             {
-                FormsAuthentication.SetAuthCookie(userName, rememberMe);
                 return Roles.IsUserInRole(userName, "Police") 
                     ? "Police" : "User";
             }

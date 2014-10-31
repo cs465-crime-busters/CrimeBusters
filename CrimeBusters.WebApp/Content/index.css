@@ -63,7 +63,7 @@ body#login{
 }
 
 #mainLogin #innerLogin {
-    padding: 15px 25px;
+    padding: 15px 25px 35px 25px;
     border: 1px solid Gray;
     width: 313px;
     margin: auto;
@@ -73,10 +73,6 @@ body#login{
     -khtml-border-radius: 5px;
     border-radius: 5px;
     position: relative;
-}
-
-label[for=rememberMe] {
-    font-size: 0.75em;
 }
 
 input#loginButton {
