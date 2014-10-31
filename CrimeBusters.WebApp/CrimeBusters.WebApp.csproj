@@ -63,6 +63,7 @@
     <Content Include="Content\images\lo.png" />
     <Content Include="Content\images\quad.jpg" />
     <Content Include="Content\uploads\testImage.JPG" />
+    <Content Include="CreateUserTemp.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -115,6 +116,13 @@
     <Content Include="Services\GetUserInfo.ashx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateUserTemp.aspx.cs">
+      <DependentUpon>CreateUserTemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateUserTemp.aspx.designer.cs">
+      <DependentUpon>CreateUserTemp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

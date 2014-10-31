@@ -38,5 +38,21 @@ namespace CrimeBusters.WebApp.Models.DAL
                 command.ExecuteNonQuery();
             }
         }
+
+        public static void CreateUserDetailsTemp(string userName, string firstName,
+            string lastName, string phoneNumber)
+        {
+            using (SqlConnection connection = ConnectionManager.GetConnection())
+            {
+                SqlCommand command = new SqlCommand("CreateUserDetails", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@UserName", userName);
+                command.Parameters.AddWithValue("@FirstName", firstName);
+                command.Parameters.AddWithValue("@LastName", lastName);
+                command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }

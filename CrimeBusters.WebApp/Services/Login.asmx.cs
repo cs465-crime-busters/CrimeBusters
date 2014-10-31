@@ -26,6 +26,7 @@ namespace CrimeBusters.WebApp.Services
         {
             if (Membership.ValidateUser(userName, password))
             {
+                FormsAuthentication.SetAuthCookie(userName, false);
                 return Roles.IsUserInRole(userName, "Police") 
                     ? "Police" : "User";
             }
