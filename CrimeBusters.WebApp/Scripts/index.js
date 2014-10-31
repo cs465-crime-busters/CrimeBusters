@@ -4,8 +4,9 @@ var loMarkers = [];
 var reports = [];
 
 $(function () {
-	var map = $.getMap();
-	$.plotUsersOnMap(map);
+    var map = $.getMap();
+    $("#searchPanel").tabs();
+	// $.plotUsersOnMap(map); // Commenting this one for the mean time while we create the prototype.
 
     //shows the uploaded media sent from Android
 	$(document).on("click", "a.viewUploadedMedia", function (e) {

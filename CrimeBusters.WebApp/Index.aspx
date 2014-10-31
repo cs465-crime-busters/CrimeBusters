@@ -14,30 +14,46 @@
     <form id="form1" runat="server">
         <div id="main">
             <div id="dashboard">
-            <header>
-                <h3>Crime Buster</h3>
-                <div id="rightMenu">
-                    Welcome <asp:LoginName ID="loginName" runat="server" />! | 
+                <header>
+                    <h3>International Crime Busters</h3>
+                    <div id="rightMenu">
+                        Welcome
+                        <asp:LoginName ID="loginName" runat="server" />
+                        ! | 
                     <div id="user" class="dropdown">
                         <span class="dropdown-toggle" data-toggle="dropdown">More Options</span>
                         <ul class="dropdown-menu">
-                            <li><a href="#" id="allAlerts" data-reporttype="all">All Alerts</a></li>
-                            <li><a href="#" id="hiAlerts" data-reporttype="high">High Alerts</a></li>
-                            <li><a href="#" id="loAlerts" data-reporttype="low">Low Alerts</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#" id="showReports">All Reports</a></li>
-                            <li class="divider"></li>
+                            <li><a href="#" id="editProfile">Edit Profile</a></li>
                             <li><a href="#" id="signOut">Sign Out</a></li>
                         </ul>
                     </div>
-                </div>
-            </header>
+                    </div>
+                </header>
             </div>
             <div id="map"></div>
+            <div id="lowerSection">
+                <div id="mainSearch">
+                    <h6>Crimes & Search</h6>
+                    <div id="searchPanel">
+                        <ul>
+                            <li><a id="crimesTab" href="#crimes">CRIMES</a></li>
+                            <li><a id="searchTab" href="#search">SEARCH</a></li>
+                        </ul>
+                        <div id="crimes">
+                        </div>
+                        <div id="search">
+                        </div>
+                    </div>
+                </div>
+                <div id="mainPreview">
+                    <h6>Preview</h6>
+                    <div id="previewPanel">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="uploadedMediaWindow" style="display: none">
-
         </div>
         <div id="reportsDashboard" style="display: none"></div>
     </form>
