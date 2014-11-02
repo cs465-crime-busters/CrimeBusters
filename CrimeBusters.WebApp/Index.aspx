@@ -33,7 +33,7 @@
             <div id="map"></div>
             <div id="lowerSection">
                 <div id="mainSearch">
-                    <h6>Crimes & Search</h6>
+                    <h6 class="roundCorners">Crimes & Search</h6>
                     <div id="searchPanel">
                         <ul>
                             <li><a id="crimesTab" href="#crimes">CRIMES</a></li>
@@ -46,8 +46,22 @@
                     </div>
                 </div>
                 <div id="mainPreview">
-                    <h6>Preview</h6>
+                    <h6 class="roundCorners">Preview</h6>
                     <div id="previewPanel">
+<%--                        <img src="/Content/uploads/testImage.JPG" alt="Uploaded Image" height="170" width="460" />--%>
+                        
+<%--                        <video width='460' height='170' controls>
+                            <source src="/Content/uploads/testVideo.mp4" type='video/mp4' />
+                            <source src="/Content/uploads/testVideo.mp4" type='video/ogg' />
+                            <source src="/Content/uploads/testVideo.mp4" type='video/webm' /> 
+                        Your browser does not support the video tag.</video>--%>
+
+                        <audio controls>
+                            <source src="/Content/uploads/testAudio.ogg" type="audio/mp3" />
+                            <source src="/Content/uploads/testAudio.ogg" type="audio/ogg" />
+                            <source src="/Content/uploads/testAudio.ogg"  type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
                     </div>
                 </div>
             </div>

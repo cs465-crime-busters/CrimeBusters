@@ -325,9 +325,9 @@ $(function () {
             } else if ($.isVideo(mediaUrl)) {
                 $("ul.uploadedMedia", "#uploadedMediaWindow").append(
                     "<video width='320' height='240' controls>" +
-                        "<source src='" + mediaUrl.substr(2) + "' type='video/mp4'>" +
-                        "<source src='" + mediaUrl.substr(2) + "' type='video/ogg'>" +
-                        "<source src='" + mediaUrl.substr(2) + "' type='video/webm'>" +
+                        "<source src='" + mediaUrl.substr(2) + "' type='video/mp4' />" +
+                        "<source src='" + mediaUrl.substr(2) + "' type='video/ogg' />" +
+                        "<source src='" + mediaUrl.substr(2) + "' type='video/webm' />" +
                         "Your browser does not support the video tag.</video>"
 	            );
             } else if ($.isAudio(mediaUrl)) {

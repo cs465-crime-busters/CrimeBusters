@@ -206,9 +206,25 @@ ul.uploadedMedia li {
     position: relative;
 }
 
+.roundCorners {
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-opera-border-radius: 5px;
+	-khtml-border-radius: 5px;
+    border-radius: 5px; 
+}
+
 #lowerSection h6 {
     font-weight: bold;
     text-align: center;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#lowerSection .ui-tabs-anchor {
+    font-size: 11px; 
 }
 
 #lowerSection #mainSearch,
