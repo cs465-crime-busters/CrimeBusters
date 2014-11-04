@@ -8,6 +8,21 @@ $(function () {
     $("#searchPanel").tabs();
 	// $.plotUsersOnMap(map); // Commenting this one for the mean time while we create the prototype.
 
+    $("input#fromDate").datepicker({
+        altField: "#altFieldFrom",
+        altFormat: "mm/dd/yy",
+        showAnim: "slideDown"
+    });
+
+    $("input#toDate").datepicker({
+        altField: "#altFieldTo",
+        altFormat: "mm/dd/yy",
+        showAnim: "slideDown"
+    });
+
+    $("#reportTypeSelection").buttonset();
+
+
     //shows the uploaded media sent from Android
 	$(document).on("click", "a.viewUploadedMedia", function (e) {
 	    e.preventDefault();

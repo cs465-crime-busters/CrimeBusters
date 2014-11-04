@@ -42,18 +42,27 @@
                         <div id="crimes">
                         </div>
                         <div id="search">
+                            <input id="fromDate" type="text" placeholder="From Date" class="roundCorners" />
+                            <input id="altFieldFrom" type="hidden" />
+                            <input id="toDate" type="text" placeholder="To Date" class="roundCorners" />
+                            <input id="altFieldTo" type="hidden" />
+                            <div id="reportTypeSelection">
+                                <input id="highPriorityRadio" type="radio" name="reportType" value="emergency" checked="checked" /><label for="highPriorityRadio">Emergency</label>
+                                <input id="lowPriorityRadio" type="radio" name="reportType" value="crime" /><label for="lowPriorityRadio">Crime</label>
+                            </div>
+                            <input type="button" value="Search" />
                         </div>
                     </div>
                 </div>
                 <div id="mainPreview">
                     <h6 class="roundCorners">Preview</h6>
                     <div id="previewPanel">
-<%--                        <img src="/Content/uploads/testImage.JPG" alt="Uploaded Image" height="170" width="460" />--%>
+      <%--                  <img src="/Content/uploads/testImage.JPG" alt="Uploaded Image" height="170" width="460" />--%>
                         
 <%--                        <video width='460' height='170' controls>
-                            <source src="/Content/uploads/testVideo.mp4" type='video/mp4' />
-                            <source src="/Content/uploads/testVideo.mp4" type='video/ogg' />
-                            <source src="/Content/uploads/testVideo.mp4" type='video/webm' /> 
+                            <source src="/Content/uploads/TestVideo.mp4" type='video/mp4' />
+                            <source src="/Content/uploads/TestVideo.mp4" type='video/ogg' />
+                            <source src="/Content/uploads/TestVideo.mp4" type='video/webm' /> 
                         Your browser does not support the video tag.</video>--%>
 
                         <audio controls>

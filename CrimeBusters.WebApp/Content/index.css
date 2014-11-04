@@ -246,3 +246,17 @@ ul.uploadedMedia li {
     top: 0;
     right: 0;
 }
+
+#lowerSection input[type=text] {
+    padding: 3px;
+    border: 1px solid black;
+}
+
+#lowerSection input#toDate,
+#lowerSection input#fromDate {
+    width: 100px;
+}
+
+#reportTypeSelection {
+    display: inline;
+}
