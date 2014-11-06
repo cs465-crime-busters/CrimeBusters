@@ -25,5 +25,15 @@ namespace CrimeBusters.WebApp.Services
         {
             return Report.GetReports();
         }
+
+        /// <summary>
+        /// Gets active reports from the database. 
+        /// </summary>
+        /// <returns>List of Report object.</returns>
+        [WebMethod]
+        public List<Report> GetActiveReports()
+        {
+            return Report.GetActiveReports();
+        }
     }
 }

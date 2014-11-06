@@ -60,6 +60,15 @@ namespace CrimeBusters.WebApp.Models.DAL
             return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
         }
 
+        public static SqlDataReader GetActiveReports()
+        {
+            SqlConnection connection = ConnectionManager.GetConnection();
+            SqlCommand command = new SqlCommand("GetActiveReports", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
+        }
+
         /// <summary>
         /// Delete Reports by initiating the execution of stored procedure on database 
         /// </summary>

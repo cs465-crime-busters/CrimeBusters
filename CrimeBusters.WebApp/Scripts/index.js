@@ -6,7 +6,7 @@ var reports = [];
 $(function () {
     var map = $.getMap();
     $("#searchPanel").tabs();
-	// $.plotUsersOnMap(map); // Commenting this one for the mean time while we create the prototype.
+	$.plotUsersOnMap(map); 
 
     $("input#fromDate").datepicker({
         altField: "#altFieldFrom",
@@ -105,7 +105,7 @@ $(function () {
 		var mapOptions = {
 				zoom: 15,
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
-				center: new google.maps.LatLng(40.099876, -88.227857)
+				center: new google.maps.LatLng(40.106287, -88.225483)
 		};
 			
 		return new google.maps.Map($("#map").get(0), mapOptions);
@@ -121,7 +121,7 @@ $(function () {
 	        dataType: "json",
 	        timeout: 10000,
 	        contentType: "application/json",
-	        url: "../Services/Index.asmx/GetReports",
+	        url: "../Services/Index.asmx/GetActiveReports",
 	        success: function (data) {
 	            reports = data.d;
 	            $.each(data.d, function (index) {
@@ -150,7 +150,7 @@ $(function () {
 	                    position: location,
 	                    map: map,
 	                    title: this.User.UserName,
-                        icon: this.MarkerImage,
+	                    icon: this.ReportTypeId == 1 ? "../Content/images/hi.png" : "../Content/images/lo.png",
 	                    animation: google.maps.Animation.BOUNCE
 	                });
 	                marker.markerId = index;
@@ -169,28 +169,18 @@ $(function () {
 	                tst.setHours(tst.getHours() + offset);
 
 	                var content = "<div id='markerPopup'>" + this.User.FirstName + " " + this.User.LastName + " needs help!" +
-                                        "<h3>User Details</h3>" +
+                                        "<h5>User Details</h5>" +
                                         "<ul>" +
                                             "<li>Report Type: " + this.ReportType + "</li>" +
                                             "<li>Message: " + this.Message + "</li>" +
                                             "<li>Date Reported: " + tst.toLocaleString() + "</li>" +
-                                            "<li>Gender: " + this.User.Gender + "</li>" +
                                             "<li>Email: " + this.User.Email + "</li>" +
                                             "<li>Phone Number: " + this.User.PhoneNumber + "</li>" +
-                                            "<li>Address: " + this.User.Address + "</li>" +
-                                            "<li>Zip Code: " + this.User.ZipCode + "</li>" +
-                                            "<li>Current Location: " + marker.getPosition().toString() + "</li>" +
+                                            "<li>GPS Coordinates: " + marker.getPosition().toString() + "</li>" +
                                             "<li>Location: " + this.Location + "</li>" +
                                         "</ul>" +
                                   "</div>";
 
-	                if (this.UrlList.length != 0) {
-	                    content += "<a class='viewUploadedMedia' href='#'>View Uploaded Media</a>";
-
-	                    for (var i in this.UrlList) {
-	                        content += "<input type='hidden' data-mediaUrl='" + this.UrlList[i] + "' />";
-	                    }
-	                }
 	                $.attachInfo(map, content, marker);
 	            });
 	        },
