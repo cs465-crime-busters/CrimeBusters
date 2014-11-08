@@ -94,6 +94,8 @@ namespace CrimeBusters.WebApp.Models.Report
             }
         }
 
+        public String ContactMethodPref { get; set; }
+
         public String PushId { get; set; }
 
         /// <summary>
@@ -271,6 +273,7 @@ namespace CrimeBusters.WebApp.Models.Report
                 int oLongitude = reader.GetOrdinal("Longitude");
                 int oLocation = reader.GetOrdinal("Location");
                 int oTimeStamp = reader.GetOrdinal("TimeStamp");
+                int oContactMethodPref = reader.GetOrdinal("ContactMethodPref");
                 int oUserName = reader.GetOrdinal("UserName");
                 int oFirstName = reader.GetOrdinal("FirstName");
                 int oLastName = reader.GetOrdinal("LastName");
@@ -289,6 +292,7 @@ namespace CrimeBusters.WebApp.Models.Report
                         Longitude = reader[oLongitude].ToString(),
                         Location = reader[oLocation].ToString(),
                         DateReported = Convert.ToDateTime(reader[oTimeStamp]),
+                        ContactMethodPref = reader[oContactMethodPref].ToString(),
                         User = new User
                         {
                             UserName = reader[oUserName].ToString(),

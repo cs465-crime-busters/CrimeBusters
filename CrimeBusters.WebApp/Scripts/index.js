@@ -178,11 +178,13 @@ $(function () {
 	                var fullName = this.User.FirstName + " " + this.User.LastName;
 	                var email = this.User.Email;
 	                var phoneNumber = this.User.PhoneNumber;
+	                var contactMethodPref = this.ContactMethodPref;
 
 	                if (fullName == " ") {
 	                    fullName = "anonymous";
 	                    email = "anonymous";
 	                    phoneNumber = "anonymous";
+	                    contactMethodPref = "anonymous";
 	                }
 
 	                var content = "<div id='markerPopup'>" +
@@ -191,6 +193,7 @@ $(function () {
                                             "<li>Reported By: " + fullName + "</li>" +
                                             "<li>Email: " + email + "</li>" +
                                             "<li>Phone Number: " + phoneNumber + "</li>" +
+                                            "<li>Preferred Contact Method: " + contactMethodPref + "</li>" +
                                             "<li>Report Type: " + this.ReportType + "</li>" +
                                             "<li>Message: " + this.Message + "</li>" +
                                             "<li>Date Reported: " + tst.toLocaleString() + "</li>" +
