@@ -69,6 +69,33 @@ namespace CrimeBusters.WebApp.Models.DAL
             return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
         }
 
+        public static String GetPushId(int reportId)
+        {
+            String pushId;
+            using (SqlConnection connection = ConnectionManager.GetConnection())
+            {
+                SqlCommand command = new SqlCommand("GetPushId", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ReportId", reportId);
+
+                pushId = (String) command.ExecuteScalar();
+            }
+            return pushId;
+        }
+
+        public static void UpdatePushId(int reportId, String newPushId)
+        {
+            using (SqlConnection connection = ConnectionManager.GetConnection())
+            {
+                SqlCommand command = new SqlCommand("UpdatePushId", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ReportId", reportId);
+                command.Parameters.AddWithValue("@NewPushId", newPushId);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
         /// <summary>
         /// Delete Reports by initiating the execution of stored procedure on database 
         /// </summary>

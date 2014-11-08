@@ -97,6 +97,13 @@ $(function () {
             $.zoomUser(map, $tr.attr("data-markerId"), $tr.attr("data-reportType"));
         }).dialog("close");
     });
+
+    $(document).on("click", "a.ackReport", function(e) {
+        e.preventDefault();
+
+        var reportId = $(this).attr("data-reportId");
+        $.acknowledgeReport(reportId);
+    });
 });
 
 (function ($) {
@@ -179,7 +186,7 @@ $(function () {
                                             "<li>GPS Coordinates: " + marker.getPosition().toString() + "</li>" +
                                             "<li>Location: " + this.Location + "</li>" +
                                         "</ul>" +
-                                  "</div>";
+                                  "<a href='#' class='ackReport' data-reportId='" + this.ReportId + "'>Acknowledge Report</a></div>";
 
 	                $.attachInfo(map, content, marker);
 	            });
@@ -454,6 +461,23 @@ $(function () {
         } else {
             return false;
         }
+    }
+
+    $.acknowledgeReport = function(reportId) {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            data: JSON.stringify({ "reportId": reportId }),
+            timeout: 10000,
+            contentType: "application/json",
+            url: "../Services/PushNotification.asmx/AcknowledgeReport",
+            success: function (data) {
+                alert("success");
+            },
+            error: function () {
+                alert("Unable to communicate with the server. Please try again.");
+            }
+        });
     }
 })(jQuery);
 

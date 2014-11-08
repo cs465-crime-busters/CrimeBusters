@@ -1,4 +1,5 @@
-﻿using CrimeBusters.WebApp.Models.DAL;
+﻿using System.Web.Script.Serialization;
+using CrimeBusters.WebApp.Models.DAL;
 using CrimeBusters.WebApp.Models.Documents;
 using CrimeBusters.WebApp.Models.Users;
 using System;
@@ -17,6 +18,10 @@ namespace CrimeBusters.WebApp.Models.Report
         private String _reportType;
         private List<IDocument> _media = new List<IDocument>();
         private List<String> _urlList = new List<string>();
+
+        private const String COLLAPSE_KEY_ACK = "ack";
+        private const String GCM_SERVICE = "https://android.googleapis.com/gcm/send";
+        private const String GOOGLE_API_KEY = "AIzaSyBB-ZhNGNBWYRF1lK4NvnKehIHn48_ZXg4";
 
         /// <summary>
         /// Reported Id property
@@ -88,6 +93,8 @@ namespace CrimeBusters.WebApp.Models.Report
                             System.Globalization.CultureInfo.InvariantCulture);
             }
         }
+
+        public String PushId { get; set; }
 
         /// <summary>
         /// User property user property for report
@@ -339,6 +346,76 @@ namespace CrimeBusters.WebApp.Models.Report
         public void AddUrlList(String url)
         {
             _urlList.Add(url);
+        }
+
+        public String AcknowledgeReport()
+        {
+            try
+            {
+                String pushId = ReportsDAO.GetPushId(ReportId);
+
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                String payloadJsonString = serializer.Serialize(new
+                {
+                    registration_ids = new[] { pushId },
+                    data = new { notificationType = "ack" },
+                    collapse_key = COLLAPSE_KEY_ACK,
+                    delay_while_idle = true
+                });
+
+                var client = new RestClient(
+                        GCM_SERVICE,
+                        HttpVerb.POST
+                    )
+                {
+                    ContentType = "application/json",
+                    PostData = payloadJsonString
+                };
+                client.AddHeader("Authorization", String.Format("key = {0}", GOOGLE_API_KEY));
+                AndroidResponse androidResponse = serializer.Deserialize<AndroidResponse>(client.MakeRequest());
+
+                if (NoErrorAndNoNewPushId(androidResponse))
+                {
+                    return "success";
+                }
+
+                ProcessResponseFurther(androidResponse);
+
+                return "error";
+            }
+            catch (Exception ex)
+            {
+                // Do something with the error.
+                String e = ex.Message;
+                return "error";
+            }
+        }
+
+        private static bool NoErrorAndNoNewPushId(AndroidResponse androidResponse)
+        {
+            return Convert.ToInt32(androidResponse.failure) == 0 &&
+                   Convert.ToInt32(androidResponse.canonical_ids) == 0;
+        }
+
+        private void ProcessResponseFurther(AndroidResponse androidResponse)
+        {
+            AndroidResponseResult[] responseResultArray =
+                androidResponse.results;
+
+            foreach (var responseResult in responseResultArray)
+            {
+                if (!String.IsNullOrEmpty(responseResult.message_id))
+                {
+                    if (!String.IsNullOrEmpty(responseResult.registration_id))
+                    {
+                        ReportsDAO.UpdatePushId(ReportId, responseResult.registration_id);
+                    }
+                    else
+                    {
+                        // Handle the error further
+                    }
+                }
+            }
         }
     }
 }

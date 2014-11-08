@@ -69,6 +69,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Services\CreateUser.ashx" />
     <Content Include="Services\Login.asmx" />
+    <Content Include="Services\PushNotification.asmx" />
     <Content Include="Services\ValidateUser.ashx" />
     <Content Include="Services\UpdateProfile.ashx" />
     <Content Include="Services\DeleteUser.ashx" />
@@ -144,6 +145,7 @@
     <Compile Include="Models\Documents\Photo.cs" />
     <Compile Include="Models\Documents\Video.cs" />
     <Compile Include="Models\Login\Login.cs" />
+    <Compile Include="Models\Report\AndroidResponse.cs" />
     <Compile Include="Models\Users\IUser.cs" />
     <Compile Include="Models\DAL\ReportsDAO.cs" />
     <Compile Include="Models\DAL\UsersDAO.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="Models\Users\User.cs" />
     <Compile Include="Models\Util\Email.cs" />
     <Compile Include="Models\Util\ContentLocator.cs" />
+    <Compile Include="Models\Util\RestClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CreateUser.ashx.cs">
       <DependentUpon>CreateUser.ashx</DependentUpon>
@@ -175,6 +178,10 @@
     </Compile>
     <Compile Include="Services\PostReport.ashx.cs">
       <DependentUpon>PostReport.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PushNotification.asmx.cs">
+      <DependentUpon>PushNotification.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Services\UpdateProfile.ashx.cs">
       <DependentUpon>UpdateProfile.ashx</DependentUpon>
