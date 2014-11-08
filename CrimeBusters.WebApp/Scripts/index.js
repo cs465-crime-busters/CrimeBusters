@@ -175,14 +175,25 @@ $(function () {
 	                var offset = -((new Date()).getTimezoneOffset() / 60);
 	                tst.setHours(tst.getHours() + offset);
 
-	                var content = "<div id='markerPopup'>" + this.User.FirstName + " " + this.User.LastName + " needs help!" +
-                                        "<h5>User Details</h5>" +
+	                var fullName = this.User.FirstName + " " + this.User.LastName;
+	                var email = this.User.Email;
+	                var phoneNumber = this.User.PhoneNumber;
+
+	                if (fullName == " ") {
+	                    fullName = "anonymous";
+	                    email = "anonymous";
+	                    phoneNumber = "anonymous";
+	                }
+
+	                var content = "<div id='markerPopup'>" +
+                                        "<h5>Report Details</h5>" +
                                         "<ul>" +
+                                            "<li>Reported By: " + fullName + "</li>" +
+                                            "<li>Email: " + email + "</li>" +
+                                            "<li>Phone Number: " + phoneNumber + "</li>" +
                                             "<li>Report Type: " + this.ReportType + "</li>" +
                                             "<li>Message: " + this.Message + "</li>" +
                                             "<li>Date Reported: " + tst.toLocaleString() + "</li>" +
-                                            "<li>Email: " + this.User.Email + "</li>" +
-                                            "<li>Phone Number: " + this.User.PhoneNumber + "</li>" +
                                             "<li>GPS Coordinates: " + marker.getPosition().toString() + "</li>" +
                                             "<li>Location: " + this.Location + "</li>" +
                                         "</ul>" +
@@ -472,7 +483,11 @@ $(function () {
             contentType: "application/json",
             url: "../Services/PushNotification.asmx/AcknowledgeReport",
             success: function (data) {
-                alert("success");
+                if (data.d == "success") {
+                    alert("Acknowledgement sent.");
+                } else {
+                    alert(data.d);
+                }
             },
             error: function () {
                 alert("Unable to communicate with the server. Please try again.");

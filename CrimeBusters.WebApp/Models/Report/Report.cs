@@ -354,6 +354,11 @@ namespace CrimeBusters.WebApp.Models.Report
             {
                 String pushId = ReportsDAO.GetPushId(ReportId);
 
+                if (String.IsNullOrEmpty(pushId))
+                {
+                    return "Cannot acknowledge report. No push ID received from device.";
+                }
+
                 JavaScriptSerializer serializer = new JavaScriptSerializer();
                 String payloadJsonString = serializer.Serialize(new
                 {
@@ -385,9 +390,7 @@ namespace CrimeBusters.WebApp.Models.Report
             }
             catch (Exception ex)
             {
-                // Do something with the error.
-                String e = ex.Message;
-                return "error";
+                return ex.Message;
             }
         }
 

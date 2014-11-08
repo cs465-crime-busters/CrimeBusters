@@ -78,7 +78,7 @@ namespace CrimeBusters.WebApp.Models.DAL
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@ReportId", reportId);
 
-                pushId = (String) command.ExecuteScalar();
+                pushId = command.ExecuteScalar() != DBNull.Value ? (String)command.ExecuteScalar() : String.Empty;
             }
             return pushId;
         }
