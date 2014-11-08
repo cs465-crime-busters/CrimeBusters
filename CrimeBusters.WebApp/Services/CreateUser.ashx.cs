@@ -22,7 +22,6 @@ namespace CrimeBusters.WebApp.Services
         {
             HttpRequest request = context.Request;
             HttpResponse response = context.Response;
-            String jsonString = String.Empty;
             JavaScriptSerializer serializer = new JavaScriptSerializer();
 
             LoginModel.Login login = new LoginModel.Login(new User { 
@@ -34,7 +33,7 @@ namespace CrimeBusters.WebApp.Services
             });
 
             MembershipCreateStatus createStatus = login.CreateUser(new WebContentLocator());
-            jsonString = serializer.Serialize(new { result = createStatus.ToString() });
+            string jsonString = serializer.Serialize(new { result = createStatus.ToString() });
 
             response.Write(jsonString);
             response.ContentType = "application/json";

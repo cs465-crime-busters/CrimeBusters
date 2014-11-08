@@ -98,8 +98,7 @@ namespace CrimeBusters.WebApp.Models.Login
         /// </summary>
         private void CreateUserDetails()
         {
-            LoginDAO.CreateUserDetails(this.User.UserName, this.User.FirstName, 
-                this.User.LastName, this.User.Email);
+            LoginDAO.CreateUserDetails(User.UserName, User.FirstName, User.LastName);
         }
 
         /// <summary>

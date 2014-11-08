@@ -10,7 +10,7 @@ namespace CrimeBusters.WebApp.Models.DAL
         /// for Android account creation
         /// </summary>
         public static void CreateUserDetails(string userName, string firstName, 
-            string lastName, string email)
+            string lastName)
         {
             using (SqlConnection connection = ConnectionManager.GetConnection())
             {
@@ -19,7 +19,6 @@ namespace CrimeBusters.WebApp.Models.DAL
                 command.Parameters.AddWithValue("@UserName", userName);
                 command.Parameters.AddWithValue("@FirstName", firstName);
                 command.Parameters.AddWithValue("@LastName", lastName);
-                command.Parameters.AddWithValue("@Email", email);
 
                 command.ExecuteNonQuery();
             }

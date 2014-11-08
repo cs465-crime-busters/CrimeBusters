@@ -33,8 +33,8 @@ namespace CrimeBusters.WebApp.Models.DAL
         /// String zipCode :  Zip code
         /// String userName : User Name
         /// </summary>
-        public static void UpdateUserInformation(String firstName, String lastName, String gender, 
-            String phoneNumber, String address, String zipCode, String userName)
+        public static void UpdateUserInformation(String firstName, String lastName,
+            String phoneNumber, String userName)
         {
             using (SqlConnection connection = ConnectionManager.GetConnection())
             {
@@ -44,10 +44,7 @@ namespace CrimeBusters.WebApp.Models.DAL
                 };
                 command.Parameters.AddWithValue("@FirstName", firstName);
                 command.Parameters.AddWithValue("@LastName", lastName);
-                command.Parameters.AddWithValue("@Gender", gender);
                 command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                command.Parameters.AddWithValue("@Address", address);
-                command.Parameters.AddWithValue("@ZipCode", zipCode);
                 command.Parameters.AddWithValue("@UserName", userName);
 
                 command.ExecuteNonQuery();

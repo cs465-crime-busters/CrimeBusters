@@ -3,8 +3,6 @@ using CrimeBusters.WebApp.Models.Documents;
 using CrimeBusters.WebApp.Models.Report;
 using CrimeBusters.WebApp.Models.Users;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
 using CrimeBusters.WebApp.Models.Util;
@@ -28,9 +26,7 @@ namespace CrimeBusters.WebApp.Services
 
             try
             {
-                HttpPostedFile photo1 = request.Files["photo1"];
-                HttpPostedFile photo2 = request.Files["photo2"];
-                HttpPostedFile photo3 = request.Files["photo3"];
+                HttpPostedFile photo = request.Files["photo"];
                 HttpPostedFile video = request.Files["video"];
                 HttpPostedFile audio = request.Files["audio"];
 
@@ -42,9 +38,11 @@ namespace CrimeBusters.WebApp.Services
                     Location = request.Form["location"],
                     DateReported = Convert.ToDateTime(request.Form["timeStamp"]),
                     User = new User(request.Form["userName"]),
-                    Message = request.Form["desc"]
+                    Message = request.Form["desc"],
+                    PushId = request.Form["pushId"],
+                    ContactMethodPref = request.Form["contactMethodPref"]
                 };
-                AddMedia(report, photo1, photo2, photo3, video, audio);
+                AddMedia(report, photo, video, audio);
 
                 jsonString = serializer.Serialize(
                     new { result = report.CreateReport(new WebContentLocator()) });
@@ -63,44 +61,15 @@ namespace CrimeBusters.WebApp.Services
         /// <summary>
         /// saves the media to Disk
         /// </summary>
-        private static void AddMedia(Report report, HttpPostedFile photo1, HttpPostedFile photo2, HttpPostedFile photo3,
-            HttpPostedFile video, HttpPostedFile audio)
+        private static void AddMedia(Report report, HttpPostedFile photo, HttpPostedFile video, HttpPostedFile audio)
         {
-            if (photo1 != null)
+            if (photo != null)
             {
-                FileInfo fileInfo = new FileInfo(photo1.FileName);
+                FileInfo fileInfo = new FileInfo(photo.FileName);
                 report.AddMedia(new Photo
                 {
                     Url = "~/Content/uploads/" + DateTime.Now.Ticks + "1_" + fileInfo.Name,
-                    File = photo1
-                });
-            }
-            else
-            {
-                report.AddMedia(null);
-            }
-
-            if (photo2 != null)
-            {
-                FileInfo fileInfo = new FileInfo(photo2.FileName);
-                report.AddMedia(new Photo
-                {
-                    Url = "~/Content/uploads/" + DateTime.Now.Ticks + "2_" + fileInfo.Name,
-                    File = photo2
-                });
-            }
-            else
-            {
-                report.AddMedia(null);
-            }
-
-            if (photo3 != null)
-            {
-                FileInfo fileInfo = new FileInfo(photo3.FileName);
-                report.AddMedia(new Photo
-                {
-                    Url = "~/Content/uploads/" + DateTime.Now.Ticks + "3_" + fileInfo.Name,
-                    File = photo3
+                    File = photo
                 });
             }
             else

@@ -26,10 +26,7 @@ namespace CrimeBusters.WebApp.Services
                 {
                     FirstName = request.Form["firstName"],
                     LastName = request.Form["lastName"],
-                    Gender = request.Form["gender"],
                     PhoneNumber = request.Form["phoneNumber"],
-                    Address = request.Form["address"],
-                    ZipCode = request.Form["zipCode"],
                     UserName = request.Form["userName"]
                 };
                 user.UpdateProfile();

@@ -47,11 +47,8 @@ namespace CrimeBusters.WebApp.Models.Users
                         UserName = reader["UserName"].ToString(),
                         FirstName = reader["FirstName"].ToString(),
                         LastName = reader["LastName"].ToString(),
-                        Gender = reader["Gender"].ToString(),
                         Email = reader["Email"].ToString(),
-                        PhoneNumber = reader["PhoneNumber"].ToString(),
-                        Address = reader["Address"].ToString(),
-                        ZipCode = reader["ZipCode"].ToString()
+                        PhoneNumber = reader["PhoneNumber"].ToString()
                     };
                 }
             }
@@ -72,15 +69,7 @@ namespace CrimeBusters.WebApp.Models.Users
         /// </summary>
         public void UpdateProfile()
         {
-            if (this.Gender.ToUpper() != "M" 
-                && this.Gender.ToUpper() != "F")
-            {
-                throw  new InvalidDataException("Invalid gender");
-            }
-
-            UsersDAO.UpdateUserInformation(this.FirstName, 
-                this.LastName, this.Gender, this.PhoneNumber, 
-                this.Address, this.ZipCode, this.UserName);
+            UsersDAO.UpdateUserInformation(FirstName, LastName, PhoneNumber, UserName);
         }
     }
 }
