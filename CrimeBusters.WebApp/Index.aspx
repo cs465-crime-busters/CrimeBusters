@@ -35,15 +35,26 @@
                         <div id="crimes">
                         </div>
                         <div id="search">
-                            <input id="fromDate" type="text" placeholder="From Date" class="roundCorners" />
+                            <asp:TextBox ID="fromDate" runat="server" placeholder="From Date" CssClass="roundCorners"></asp:TextBox>
+                            <%-- <input id="fromDate" type="text" placeholder="From Date" class="roundCorners" /> --%>
                             <input id="altFieldFrom" type="hidden" />
-                            <input id="toDate" type="text" placeholder="To Date" class="roundCorners" />
+                            <asp:TextBox ID="toDate" runat="server" placeholder="To Date" CssClass="roundCorners"></asp:TextBox>
+                            <%-- <input id="toDate" type="text" placeholder="To Date" class="roundCorners" /> --%>
                             <input id="altFieldTo" type="hidden" />
                             <div id="reportTypeSelection">
+                                <asp:RadioButtonList ID="CrimeTypeList" runat="server" RepeatDirection="Horizontal" CssClass="radio-inline">
+                                    <asp:ListItem Selected="True">Emergency</asp:ListItem>
+                                    <asp:ListItem>Crime</asp:ListItem>
+                                </asp:RadioButtonList>
+                            <%--
                                 <input id="highPriorityRadio" type="radio" name="reportType" value="emergency" checked="checked" /><label for="highPriorityRadio">Emergency</label>
                                 <input id="lowPriorityRadio" type="radio" name="reportType" value="crime" /><label for="lowPriorityRadio">Crime</label>
+                            --%>
                             </div>
-                            <input type="button" value="Search" />
+                            <asp:Button ID="SearchByDateButton" runat="server" Text="Search" OnClick="GetReportsByDate" CssClass="btn-block"/>
+                            <asp:ListBox ID="SearchList" runat="server"></asp:ListBox>
+                            <asp:Label ID="ResultLabel" runat="server"></asp:Label>
+                            <!--<input type="button" value="Search" /> -->
                         </div>
                     </div>
                 </div>
