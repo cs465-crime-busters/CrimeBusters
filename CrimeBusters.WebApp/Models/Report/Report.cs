@@ -170,7 +170,7 @@ namespace CrimeBusters.WebApp.Models.Report
             {
                 ReportsDAO.CreateReport(ReportTypeId, Message, 
                     Latitude, Longitude, Location, DateReported, 
-                    User.UserName, UrlList);
+                    User.UserName, UrlList, PushId, ContactMethodPref);
                 return "success";
             }
             catch (Exception ex)

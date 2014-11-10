@@ -24,7 +24,7 @@ namespace CrimeBusters.WebApp.Models.DAL
         /// </summary>
         public static void CreateReport(ReportTypeEnum reportTypeId, String message, 
             String latitude, String longitude, String location, DateTime dateReported,
-            String userName, List<String> resourceUrlList) 
+            String userName, List<String> resourceUrlList, String pushId, String contactMethodPref) 
         { 
             using (SqlConnection connection = ConnectionManager.GetConnection()) 
             {
@@ -37,6 +37,8 @@ namespace CrimeBusters.WebApp.Models.DAL
                 command.Parameters.AddWithValue("@Location", location);
                 command.Parameters.AddWithValue("@DateReported", dateReported);
                 command.Parameters.AddWithValue("@UserName", userName);
+                command.Parameters.AddWithValue("@PushId", pushId);
+                command.Parameters.AddWithValue("@ContactMethodPref", contactMethodPref);
                 
                 for (int i = 1; i <= resourceUrlList.Count; i++)
                 {
