@@ -35,15 +35,5 @@ namespace CrimeBusters.WebApp.Services
         {
             return Report.GetActiveReports();
         }
-
-        /// <summary>
-        /// Gets reports by date from the database. 
-        /// </summary>
-        /// <returns>List of Report object.</returns>
-        [WebMethod]
-        public List<Report> GetReportsByDate(String fromDate, String toDate)
-        {
-            return Report.GetReportsByDate(fromDate, toDate);
-        }
     }
 }
