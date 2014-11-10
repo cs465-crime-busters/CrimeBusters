@@ -47,7 +47,11 @@ $(function () {
     //signs out of application
 	$("#signOut").on("click", function (e) {
 	    e.preventDefault();
-	    $.logOffUser();
+
+	    if (confirm("Are you sure you want to sign out?")) {
+	        e.preventDefault();
+	        $.logOffUser();
+	    }
 	});
 
     //shows reports on dashboard once option picked
