@@ -19,14 +19,7 @@
                     <div id="rightMenu">
                         Welcome
                         <asp:LoginName ID="loginName" runat="server" />
-                        ! | 
-                    <div id="user" class="dropdown">
-                        <span class="dropdown-toggle" data-toggle="dropdown">More Options</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" id="editProfile">Edit Profile</a></li>
-                            <li><a href="#" id="signOut">Sign Out</a></li>
-                        </ul>
-                    </div>
+                        ! |  <a href="#" id="signOut">Sign Out</a>
                     </div>
                 </header>
             </div>
@@ -79,6 +72,12 @@
         <div id="uploadedMediaWindow" style="display: none">
         </div>
         <div id="reportsDashboard" style="display: none"></div>
+        <div id="editProfilePanel" style="display: none">
+            <input id="firstName" />
+            <input id="lastName" />
+            <input id="phoneNumber" />
+        </div>
+
     </form>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="Scripts/jquery-1.10.2.js"></script>

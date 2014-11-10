@@ -22,7 +22,6 @@ $(function () {
 
     $("#reportTypeSelection").buttonset();
 
-
     //shows the uploaded media sent from Android
 	$(document).on("click", "a.viewUploadedMedia", function (e) {
 	    e.preventDefault();

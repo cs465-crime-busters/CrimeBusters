@@ -260,3 +260,7 @@ ul.uploadedMedia li {
 #reportTypeSelection {
     display: inline;
 }
+
+a#signOut {
+    color: rgb(0, 0, 139);
+}
