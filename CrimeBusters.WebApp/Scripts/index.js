@@ -106,6 +106,8 @@ $(function () {
     $(document).on("click", "a.ackReport", function(e) {
         e.preventDefault();
 
+        $(this).text("Acknowledging Report...");
+
         var reportId = $(this).attr("data-reportId");
         $.acknowledgeReport(reportId);
     });
@@ -578,6 +580,9 @@ $(function () {
             },
             error: function() {
                 alert("Unable to communicate with the server. Please try again.");
+            },
+            complete: function() {
+                $("a.ackReport").text("Acknowledge Report");
             }
         });
     };
