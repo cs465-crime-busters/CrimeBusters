@@ -51,9 +51,12 @@
                                 <input id="lowPriorityRadio" type="radio" name="reportType" value="crime" /><label for="lowPriorityRadio">Crime</label>
                             --%>
                             </div>
-                            <asp:Button ID="SearchByDateButton" runat="server" Text="Search" OnClick="GetReportsByDate" CssClass="btn-block"/>
-                            <asp:ListBox ID="SearchList" runat="server"></asp:ListBox>
+                            <asp:Button ID="SearchByDateButton" runat="server" Text="Search" OnClientClick="$.searchForCrimes()"  OnClick="GetReportsByDate"/><br />
+                            <asp:ListBox ID="SearchList" runat="server" Width="415"></asp:ListBox>
+                            
+                            <input id="ShowOnMapButton" type="button" value="Show on Map" hidden="hidden" onclick="$.showOnMap()"/>
                             <asp:Label ID="ResultLabel" runat="server"></asp:Label>
+                            
                             <!--<input type="button" value="Search" /> -->
                         </div>
                     </div>
