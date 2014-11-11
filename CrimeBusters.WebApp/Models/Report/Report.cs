@@ -380,6 +380,20 @@ namespace CrimeBusters.WebApp.Models.Report
             return reports;
         }
 
+        public static String UpdateIsActive(int reportId, bool isActive)
+        {
+            try
+            {
+                ReportsDAO.UpdateIsActive(reportId, isActive);
+
+                return "success";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
         /// <summary>
         /// Deletes a report from the database.
         /// </summary>

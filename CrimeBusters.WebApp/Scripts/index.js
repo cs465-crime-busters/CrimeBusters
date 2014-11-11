@@ -109,6 +109,14 @@ $(function () {
         $.acknowledgeReport(reportId);
     });
 
+    $(document).on("click", "a.closeReport", function (e) {
+        e.preventDefault();
+
+        var reportId = $(this).attr("data-reportId");
+        $.closeReport(reportId);
+    });
+
+
     $(document).on("click", "a.reports", function(e) {
         e.preventDefault();
 
@@ -211,7 +219,9 @@ $(function () {
                                             "<li>GPS Coordinates: " + marker.getPosition().toString() + "</li>" +
                                             "<li>Location: " + this.Location + "</li>" +
                                         "</ul>" +
-                                  "<a href='#' class='ackReport' data-reportId='" + this.ReportId + "'>Acknowledge Report</a></div>";
+                                  "<div style='text-align: right'><a href='#' class='ackReport' data-reportId='" + this.ReportId + "'>Acknowledge Report</a> | " +
+                                  "<a href='#' class='closeReport' data-reportId='" + this.ReportId + "'>Set Report as Inactive</a></div>" +
+                                  "</div>";
 
 	                $.attachInfo(map, content, marker);
 	            });
@@ -533,9 +543,30 @@ $(function () {
             timeout: 10000,
             contentType: "application/json",
             url: "../Services/PushNotification.asmx/AcknowledgeReport",
-            success: function (data) {
+            success: function(data) {
                 if (data.d == "success") {
                     alert("Acknowledgement sent.");
+                } else {
+                    alert(data.d);
+                }
+            },
+            error: function() {
+                alert("Unable to communicate with the server. Please try again.");
+            }
+        });
+    };
+
+    $.closeReport = function (reportId) {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            data: JSON.stringify({ "reportId": reportId, "isActive": false }),
+            timeout: 10000,
+            contentType: "application/json",
+            url: "../Services/Index.asmx/UpdateIsActive",
+            success: function (data) {
+                if (data.d == "success") {
+                    alert("Report Deactivated.");
                 } else {
                     alert(data.d);
                 }

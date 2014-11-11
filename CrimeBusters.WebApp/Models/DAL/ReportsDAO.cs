@@ -111,6 +111,19 @@ namespace CrimeBusters.WebApp.Models.DAL
             }
         }
 
+        public static void UpdateIsActive(int reportId, bool isActive)
+        {
+            using (SqlConnection connection = ConnectionManager.GetConnection())
+            {
+                SqlCommand command = new SqlCommand("UpdateIsActive", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ReportId", reportId);
+                command.Parameters.AddWithValue("@IsActive", isActive);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
         /// <summary>
         /// Delete Reports by initiating the execution of stored procedure on database 
         /// </summary>
