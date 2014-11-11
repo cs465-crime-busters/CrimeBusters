@@ -40,7 +40,8 @@ namespace CrimeBusters.WebApp.Services
                     User = new User(request.Form["userName"]),
                     Message = request.Form["desc"],
                     PushId = request.Form["pushId"],
-                    ContactMethodPref = request.Form["contactMethodPref"]
+                    ContactMethodPref = request.Form["contactMethodPref"],
+                    CrimeType = request.Form["crimeType"]
                 };
                 AddMedia(report, photo, video, audio);
 

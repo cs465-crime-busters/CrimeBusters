@@ -125,6 +125,8 @@ namespace CrimeBusters.WebApp.Models.Report
         /// </summary>
         public List<String> MediaUrl { get; set; }
 
+        public String CrimeType { get; set; }
+
         /// <summary>
         /// Report Constructor
         /// </summary>
@@ -170,7 +172,7 @@ namespace CrimeBusters.WebApp.Models.Report
             {
                 ReportsDAO.CreateReport(ReportTypeId, Message, 
                     Latitude, Longitude, Location, DateReported, 
-                    User.UserName, UrlList, PushId, ContactMethodPref);
+                    User.UserName, UrlList, PushId, ContactMethodPref, CrimeType);
                 return "success";
             }
             catch (Exception ex)
@@ -279,6 +281,7 @@ namespace CrimeBusters.WebApp.Models.Report
                 int oLastName = reader.GetOrdinal("LastName");
                 int oEmail = reader.GetOrdinal("Email");
                 int oPhoneNumber = reader.GetOrdinal("PhoneNumber");
+                int oCrimeType = reader.GetOrdinal("CrimeType");
 
                 while (reader.Read())
                 {
@@ -293,6 +296,7 @@ namespace CrimeBusters.WebApp.Models.Report
                         Location = reader[oLocation].ToString(),
                         DateReported = Convert.ToDateTime(reader[oTimeStamp]),
                         ContactMethodPref = reader[oContactMethodPref].ToString(),
+                        CrimeType = reader[oCrimeType].ToString(),
                         User = new User
                         {
                             UserName = reader[oUserName].ToString(),

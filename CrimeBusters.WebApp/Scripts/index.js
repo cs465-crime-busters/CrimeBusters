@@ -214,6 +214,7 @@ $(function () {
                                             "<li>Phone Number: " + phoneNumber + "</li>" +
                                             "<li>Preferred Contact Method: " + contactMethodPref + "</li>" +
                                             "<li>Report Type: " + this.ReportType + "</li>" +
+                                            "<li>Crime Type: " + this.CrimeType + "</li>" +
                                             "<li>Message: " + this.Message + "</li>" +
                                             "<li>Date Reported: " + tst.toLocaleString() + "</li>" +
                                             "<li>GPS Coordinates: " + marker.getPosition().toString() + "</li>" +
