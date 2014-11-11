@@ -6,7 +6,8 @@ var reports = [];
 $(function () {
     var map = $.getMap();
     $("#searchPanel").tabs();
-	$.plotUsersOnMap(map); 
+	$.plotUsersOnMap(map);
+
 
     $("input#fromDate").datepicker({
         altField: "#altFieldFrom",
@@ -107,6 +108,12 @@ $(function () {
         var reportId = $(this).attr("data-reportId");
         $.acknowledgeReport(reportId);
     });
+
+    $(document).on("click", "a.reports", function(e) {
+        e.preventDefault();
+
+        $.zoomUser(map, $(this).attr("data-markerId"), $(this).attr("data-reportType"));
+    });
 });
 
 (function ($) {
@@ -164,8 +171,9 @@ $(function () {
 	                    animation: google.maps.Animation.BOUNCE
 	                });
 	                marker.markerId = index;
+	                reports[index].markerId = index;
 
-	                if (this.ReportType == "HIGH") {
+	                if (this.ReportTypeId == 1) {
 	                    hiMarkers.push(marker);
 	                } else {
 	                    loMarkers.push(marker);
@@ -207,6 +215,8 @@ $(function () {
 
 	                $.attachInfo(map, content, marker);
 	            });
+
+	            $.showCrimesAndEmergencies(1);
 	        },
 	        error: function (xhr, textStatus, errorThrown) {
 	            alert("Error: " + errorThrown);
@@ -274,6 +284,44 @@ $(function () {
 	        }
 	    });
     };
+
+    $.showCrimesAndEmergencies = function (pageNumber) {
+        for (var i = (pageNumber - 1) * 10; i < pageNumber * 10; i++) {
+            var subReport = reports[i];
+
+            if (subReport == null) {
+                break;
+            }
+            // Shows the local time in the browser.
+            // workaround for Safari
+            var s = (subReport.TimeStampString + "Z").split(/[^0-9]/);
+            var tst = new Date(s[2], s[0] - 1, s[1], s[3], s[4], s[5], 0);
+            var offset = -((new Date()).getTimezoneOffset() / 60);
+            tst.setHours(tst.getHours() + offset);
+
+            var noLocMediaUrls = "";
+            if (isNaN(parseFloat(subReport.Latitude)) && subReport.UrlList.length != 0) {
+                for (var j in subReport.UrlList) {
+                    noLocMediaUrls += "<input type='hidden' data-mediaUrl='" + subReport.UrlList[j] + "' />";
+                }
+            }
+
+            var location = subReport.Location;
+
+            if (location == "") {
+                location = "Unknown Location";
+            }
+
+            if (subReport.ReportTypeId == 1) {
+                $("ul", "#emergencies").append("<li><a class='reports' href='#' data-reportType='EMERGENCY' data-markerId='" + subReport.markerId
+                    + "'>Emergency on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
+            } else {
+                $("ul", "#crimes").append("<li><a class='reports' href='#' data-reportType='CRIME' data-markerId='" + subReport.markerId
+                    + "'>Crime on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
+            }
+        }
+    }
+
 
     //show reports on dashboard given the page number
     $.showReports = function(pageNumber) {
@@ -401,7 +449,7 @@ $(function () {
     };
 
     $.zoomUser = function (map, markerId, reportType) {
-        if (reportType == "HIGH") {
+        if (reportType == "EMERGENCY") {
             var userIndex = $.binarySearch(hiMarkers, markerId, 0, hiMarkers.length - 1);
 
             if (userIndex != -1) {
@@ -430,9 +478,6 @@ $(function () {
             return -1;
         } else {
             var imid = $.midpoint(imin, imax);
-
-            var 
-            deleteThis = markers[imid].markerId;
 
             if (markers[imid].markerId > key) {
                 return $.binarySearch(markers, key, imin, imid - 1);

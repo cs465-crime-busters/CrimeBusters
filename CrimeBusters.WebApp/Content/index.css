@@ -264,3 +264,16 @@ ul.uploadedMedia li {
 a#signOut {
     color: rgb(0, 0, 139);
 }
+
+#emergencies, #crimes, #search {
+    min-height: 138px;
+}
+
+#emergencies ul, #crimes ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#emergencies ul li a, #crimes ul li a {
+    font-size: smaller;
+}

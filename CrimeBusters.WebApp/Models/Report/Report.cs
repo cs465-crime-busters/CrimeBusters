@@ -260,7 +260,7 @@ namespace CrimeBusters.WebApp.Models.Report
         /// <returns>The list of Report objects.</returns>
         public static List<Report> GetActiveReports()
         {
-            SqlDataReader reader = ReportsDAO.GetActiveReports();
+            SqlDataReader reader = ReportsDAO.GetReports();
             List<Report> reports = new List<Report>();
 
             try
@@ -287,6 +287,69 @@ namespace CrimeBusters.WebApp.Models.Report
                         ReportId = Convert.ToInt32(reader[oReportId]),
                         ReportType = reader[oReportType].ToString(),
                         ReportTypeId = (ReportTypeEnum) Convert.ToInt32(reader[oReportTypeId]),
+                        Message = reader[oMessage].ToString(),
+                        Latitude = reader[oLatitude].ToString(),
+                        Longitude = reader[oLongitude].ToString(),
+                        Location = reader[oLocation].ToString(),
+                        DateReported = Convert.ToDateTime(reader[oTimeStamp]),
+                        ContactMethodPref = reader[oContactMethodPref].ToString(),
+                        User = new User
+                        {
+                            UserName = reader[oUserName].ToString(),
+                            FirstName = reader[oFirstName].ToString(),
+                            LastName = reader[oLastName].ToString(),
+                            Email = reader[oEmail].ToString(),
+                            PhoneNumber = reader[oPhoneNumber].ToString()
+                        }
+                    };
+
+                    reports.Add(report);
+                }
+            }
+            catch (Exception ex)
+            {
+                String error = ex.Message;
+            }
+            finally
+            {
+                reader.Close();
+            }
+            return reports;
+        }
+
+        /// <summary>
+        /// Gets a list of active reports from the database.
+        /// </summary>
+        /// <returns>The list of Report objects.</returns>
+        public static List<Report> GetReportsByType(ReportTypeEnum reportType, int startRowIndex, int maximumRows)
+        {
+            SqlDataReader reader = ReportsDAO.GetReports(reportType, startRowIndex, maximumRows);
+            List<Report> reports = new List<Report>();
+
+            try
+            {
+                int oReportId = Convert.ToInt32(reader.GetOrdinal("ReportId"));
+                int oReportType = reader.GetOrdinal("Type");
+                int oReportTypeId = reader.GetOrdinal("ReportTypeId");
+                int oMessage = reader.GetOrdinal("Message");
+                int oLatitude = reader.GetOrdinal("Latitude");
+                int oLongitude = reader.GetOrdinal("Longitude");
+                int oLocation = reader.GetOrdinal("Location");
+                int oTimeStamp = reader.GetOrdinal("TimeStamp");
+                int oContactMethodPref = reader.GetOrdinal("ContactMethodPref");
+                int oUserName = reader.GetOrdinal("UserName");
+                int oFirstName = reader.GetOrdinal("FirstName");
+                int oLastName = reader.GetOrdinal("LastName");
+                int oEmail = reader.GetOrdinal("Email");
+                int oPhoneNumber = reader.GetOrdinal("PhoneNumber");
+
+                while (reader.Read())
+                {
+                    Report report = new Report
+                    {
+                        ReportId = Convert.ToInt32(reader[oReportId]),
+                        ReportType = reader[oReportType].ToString(),
+                        ReportTypeId = (ReportTypeEnum)Convert.ToInt32(reader[oReportTypeId]),
                         Message = reader[oMessage].ToString(),
                         Latitude = reader[oLatitude].ToString(),
                         Longitude = reader[oLongitude].ToString(),

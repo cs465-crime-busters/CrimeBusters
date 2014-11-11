@@ -26,14 +26,19 @@
             <div id="map"></div>
             <div id="lowerSection">
                 <div id="mainSearch">
-                    <h6 class="roundCorners">Crimes & Search</h6>
+                    <h6 class="roundCorners">Events & Search</h6>
                     <div id="searchPanel">
                         <ul>
-                            <li><a id="crimesTab" href="#crimes">CRIMES</a></li>
+                            <li><a id="emergenciesTab" href="#emergencies">EMERGENCIES</a></li>
+                            <li><a id="crimesTab" href="#crimes">CRIMES</a></li>          
                             <li><a id="searchTab" href="#search">SEARCH</a></li>
                         </ul>
-                        <div id="crimes">
+                        <div id="emergencies">
+                            <ul></ul>
                         </div>
+                        <div id="crimes">
+                            <ul></ul>
+                        </div>  
                         <div id="search">
                             <input id="fromDate" type="text" placeholder="From Date" class="roundCorners" />
                             <input id="altFieldFrom" type="hidden" />

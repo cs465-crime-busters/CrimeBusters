@@ -62,11 +62,24 @@ namespace CrimeBusters.WebApp.Models.DAL
             return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
         }
 
-        public static SqlDataReader GetActiveReports()
+        public static SqlDataReader GetReports(Boolean isActive)
         {
             SqlConnection connection = ConnectionManager.GetConnection();
-            SqlCommand command = new SqlCommand("GetActiveReports", connection);
+            SqlCommand command = new SqlCommand("GetReports", connection);
             command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@IsActive", isActive);
+
+            return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
+        }
+
+        public static SqlDataReader GetReports(ReportTypeEnum reportType, int startRowIndex, int maximumRows)
+        {
+            SqlConnection connection = ConnectionManager.GetConnection();
+            SqlCommand command = new SqlCommand("GetReportsByType", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@ReportTypeId", (int) reportType);
+            command.Parameters.AddWithValue("@StartRowIndex", startRowIndex);
+            command.Parameters.AddWithValue("@MaximumRows", maximumRows);
 
             return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
         }
