@@ -2,6 +2,7 @@ var userCoords = [];
 var hiMarkers = [];
 var loMarkers = [];
 var reports = [];
+var search = false;
 
 $(function () {
     var map = $.getMap();
@@ -483,6 +484,30 @@ $(function () {
             return;
         }
     };
+
+    $.showOnMap = function () {
+        var sel = document.getElementById("SearchList");
+        var listLength = sel.options.length;
+        for (var i = 0; i < listLength; i++) {
+            if (sel.options[i].selected) {
+                //document.getElementById("SearchList").add(new Option(sel.options[i].value, listLength));
+                $.zoomUser($.getMap(), sel.options[i].value, 'LOW');
+            }
+        }
+    };
+    
+    window.onload = function () {
+        var sel = document.getElementById("SearchList");
+        var listLength = sel.options.length;
+        if (listLength > 0) {
+            document.getElementById("ShowOnMapButton").style.display = 'block';
+        }
+
+
+
+    }
+  
+
 
     $.binarySearch = function (markers, key, imin, imax) {
         if (imax < imin) {
