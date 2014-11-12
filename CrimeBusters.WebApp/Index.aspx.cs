@@ -16,31 +16,32 @@ namespace CrimeBusters.WebApp
 
         }
 
-        protected void GetReportsByDate(object sender, EventArgs e)
-        {
-            List<Report> l = Report.GetActiveReports();
-            SearchList.Items.Clear();
-            ResultLabel.Text = "";
-            ResultLabel.Visible = false;
-            bool first = true;
-            foreach (Report r in l)
-            {
-                ListItem i = new ListItem();
-                DateTime d = Convert.ToDateTime(r.TimeStampString);
-                 //&& (int)r.ReportTypeId == CrimeTypeList.SelectedValue
-                if (d >= Convert.ToDateTime(fromDate.Text) && d <= Convert.ToDateTime(toDate.Text) && r.ReportType.Trim().Equals(CrimeTypeList.SelectedValue))
-                {
-                    i.Text = r.Location;
-                    if (first == true)
-                    {
-                        i.Selected = true;
-                        first = false;
-                    }
-                    SearchList.Items.Add(i);
-                    ResultLabel.Text = " ";
+        //protected void GetReportsByDate(object sender, EventArgs e)
+        //{
+        //    List<Report> l = Report.GetActiveReports();
+        //    SearchList.Items.Clear();
+        //    ResultLabel.Text = "";
+        //    ResultLabel.Visible = false;
+        //    bool first = true;
+        //    foreach (Report r in l)
+        //    {
+        //        ListItem i = new ListItem();
+        //        DateTime d = Convert.ToDateTime(r.TimeStampString);
+        //         //&& (int)r.ReportTypeId == CrimeTypeList.SelectedValue
+        //        if (d >= Convert.ToDateTime(fromDate.Text) && d <= Convert.ToDateTime(toDate.Text) && r.ReportType.Trim().Equals(CrimeTypeList.SelectedValue))
+        //        {
+        //            i.Text = r.Location;
+        //            i.Value = r.ReportId.ToString();
+        //            if (first == true)
+        //            {
+        //                i.Selected = true;
+        //                first = false;
+        //            }
+        //            SearchList.Items.Add(i);
+        //            ResultLabel.Text = " ";
                     
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
 }

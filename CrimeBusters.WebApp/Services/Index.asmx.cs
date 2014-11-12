@@ -21,9 +21,9 @@ namespace CrimeBusters.WebApp.Services
         /// </summary>
         /// <returns>List of Report object.</returns>
         [WebMethod]
-        public List<Report> GetReports() 
+        public List<Report> GetReports(int reportTypeId, String fromDate, String toDate) 
         {
-            return Report.GetReports();
+            return Report.GetReports(reportTypeId, DateTime.Parse(fromDate), DateTime.Parse(toDate));
         }
 
         /// <summary>

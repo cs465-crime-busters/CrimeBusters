@@ -7,8 +7,8 @@ var search = false;
 $(function () {
     var map = $.getMap();
     $("#searchPanel").tabs();
-	$.plotUsersOnMap(map);
-
+    $.plotUsersOnMap(map);
+    $("input#searchByDateButton").button();
 
     $("input#fromDate").datepicker({
         altField: "#altFieldFrom",
@@ -124,6 +124,21 @@ $(function () {
         e.preventDefault();
 
         $.zoomUser(map, $(this).attr("data-markerId"), $(this).attr("data-reportType"));
+
+        var mediaUrl = $(this).attr("data-mediaUrl");
+        if (mediaUrl != "") {
+            $.showPreview(mediaUrl);
+        }
+    });
+
+    $("input#searchByDateButton").on("click", function(e) {
+        e.preventDefault();
+
+        var reportTypeId = $("input[name='CrimeTypeList']:checked").val();
+        var fromDateString = $("input#altFieldFrom").val();
+        var toDateString = $("input#altFieldTo").val();
+
+        $.getReportsFromSearch(reportTypeId, fromDateString, toDateString);
     });
 });
 
@@ -181,13 +196,13 @@ $(function () {
 	                    icon: this.ReportTypeId == 1 ? "../Content/images/hi.png" : "../Content/images/lo.png",
 	                    animation: google.maps.Animation.BOUNCE
 	                });
-	                marker.markerId = index;
-	                reports[index].markerId = index;
+	                marker.markerId = this.ReportId; //marker.markerId = index;
+	                reports[index].markerId = this.ReportId;
 
 	                if (this.ReportTypeId == 1) {
-	                    hiMarkers.push(marker);
+	                    hiMarkers.unshift(marker);
 	                } else {
-	                    loMarkers.push(marker);
+	                    loMarkers.unshift(marker);
 	                }
 
 	                // Shows the local time in the browser.
@@ -328,14 +343,74 @@ $(function () {
 
             if (subReport.ReportTypeId == 1) {
                 $("ul", "#emergencies").append("<li><a class='reports' href='#' data-reportType='EMERGENCY' data-markerId='" + subReport.markerId
-                    + "'>Emergency on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
+                    + "' data-mediaUrl=''>Emergency on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
             } else {
                 $("ul", "#crimes").append("<li><a class='reports' href='#' data-reportType='CRIME' data-markerId='" + subReport.markerId
-                    + "'>Crime on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
+                    + "' data-mediaUrl='" + subReport.Media1 + "'>Crime on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
             }
         }
     }
 
+    $.getReportsFromSearch = function(reportTypeId, fromDateString, toDateString) {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            data: JSON.stringify({ "reportTypeId": reportTypeId, "fromDate": fromDateString, "toDate": toDateString }),
+            timeout: 10000,
+            contentType: "application/json",
+            url: "../Services/Index.asmx/GetReports",
+            beforeSend: function() {
+                $("ul", "#searchResultList").children().remove();
+            },
+            success: function(data) {
+                $.each(data.d, function () {
+                    var location = this.Location;
+                    if (location == "") {
+                        location = "Unknown Location";
+                    }
+
+                    var s = (this.TimeStampString + "Z").split(/[^0-9]/);
+                    var tst = new Date(s[2], s[0] - 1, s[1], s[3], s[4], s[5], 0);
+                    var offset = -((new Date()).getTimezoneOffset() / 60);
+                    tst.setHours(tst.getHours() + offset);
+
+                    var reportType = this.ReportTypeId == 1 ? "EMERGENCY" : "CRIME";
+
+                    $("ul", "#searchResultList").append("<li><a class='reports' href='#' data-reportType='" 
+                        + reportType + "' data-markerId='" + this.ReportId
+                    + "' data-mediaUrl='" + this.Media1 + "'>" + reportType + " on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
+                });
+            },
+            error: function() {
+                
+            }
+        });
+    };
+
+    $.showPreview = function (mediaUrl) {
+        $("#previewPanel").children().remove();
+
+        if ($.isImage(mediaUrl)) {
+            $("#previewPanel").append(
+                "<img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' height='400' width='300' />");
+        } else if ($.isVideo(mediaUrl)) {
+            $("#previewPanel").append(
+                "<video width='320' height='240' controls>" +
+                    "<source src='" + mediaUrl.substr(2) + "' type='video/mp4' />" +
+                    "<source src='" + mediaUrl.substr(2) + "' type='video/ogg' />" +
+                    "<source src='" + mediaUrl.substr(2) + "' type='video/webm' />" +
+                    "Your browser does not support the video tag.</video>"
+            );
+        } else if ($.isAudio(mediaUrl)) {
+            $("#previewPanel").append(
+                "<audio controls>" +
+                "<source src='" + mediaUrl.substr(2) + "' type='audio/mp3' />" +
+                "<source src='" + mediaUrl.substr(2) + "' type='audio/ogg' />" +
+                "<source src='" + mediaUrl.substr(2) + "' type='audio/mpeg' />" +
+                "Your browser does not support the audio element." +
+                "</audio>");
+        }
+    };
 
     //show reports on dashboard given the page number
     $.showReports = function(pageNumber) {
@@ -486,31 +561,7 @@ $(function () {
             return;
         }
     };
-
-    $.showOnMap = function () {
-        var sel = document.getElementById("SearchList");
-        var listLength = sel.options.length;
-        for (var i = 0; i < listLength; i++) {
-            if (sel.options[i].selected) {
-                //document.getElementById("SearchList").add(new Option(sel.options[i].value, listLength));
-                $.zoomUser($.getMap(), sel.options[i].value, 'LOW');
-            }
-        }
-    };
     
-    window.onload = function () {
-        var sel = document.getElementById("SearchList");
-        var listLength = sel.options.length;
-        if (listLength > 0) {
-            document.getElementById("ShowOnMapButton").style.display = 'block';
-        }
-
-
-
-    }
-  
-
-
     $.binarySearch = function (markers, key, imin, imax) {
         if (imax < imin) {
             return -1;
@@ -531,11 +582,11 @@ $(function () {
         return imin + parseInt(parseInt(imax - imin) / 2);
     };
 
-    $.isImage = function(imageUrl) {
-        if (imageUrl.indexOf(".gif") > 0 || 
-            imageUrl.indexOf(".png") > 0 ||
-            imageUrl.indexOf(".jpg") > 0 ||
-            imageUrl.indexOf(".jpeg") > 0) {
+    $.isImage = function (imageUrl) {
+        if (imageUrl.toLowerCase().indexOf(".gif") > 0 || 
+            imageUrl.toLowerCase().indexOf(".png") > 0 ||
+            imageUrl.toLowerCase().indexOf(".jpg") > 0 ||
+            imageUrl.toLowerCase().indexOf(".jpeg") > 0) {
             return true;
         } else {
             return false;
@@ -543,10 +594,10 @@ $(function () {
     }
 
     $.isVideo = function (videoUrl) {
-        if (videoUrl.indexOf(".mp4") > 0 ||
-            videoUrl.indexOf(".avi") > 0 ||
-            videoUrl.indexOf(".ogv") > 0 ||
-            videoUrl.indexOf(".webm") > 0) {
+        if (videoUrl.toLowerCase().indexOf(".mp4") > 0 ||
+            videoUrl.toLowerCase().indexOf(".avi") > 0 ||
+            videoUrl.toLowerCase().indexOf(".ogv") > 0 ||
+            videoUrl.toLowerCase().indexOf(".webm") > 0) {
             return true;
         } else {
             return false;
@@ -554,9 +605,9 @@ $(function () {
     }
 
     $.isAudio = function (audioUrl) {
-        if (audioUrl.indexOf(".mp3") > 0 ||
-            audioUrl.indexOf(".wav") > 0 ||
-            audioUrl.indexOf(".3gp") > 0) {
+        if (audioUrl.toLowerCase().indexOf(".mp3") > 0 ||
+            audioUrl.toLowerCase().indexOf(".wav") > 0 ||
+            audioUrl.toLowerCase().indexOf(".3gp") > 0) {
             return true;
         } else {
             return false;

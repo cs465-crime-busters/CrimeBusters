@@ -55,11 +55,23 @@ namespace CrimeBusters.WebApp.Models.DAL
         /// Gets Reports by initiating the execution of stored procedure on database 
         /// returning a SqlDataReader
         /// </summary>
-        public static SqlDataReader GetReports()
+        public static SqlDataReader GetActiveReports()
+        {
+            SqlConnection connection = ConnectionManager.GetConnection();
+            SqlCommand command = new SqlCommand("GetActiveReports", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
+        }
+
+        public static SqlDataReader GetReports(int reportTypeId, DateTime fromDate, DateTime toDate)
         {
             SqlConnection connection = ConnectionManager.GetConnection();
             SqlCommand command = new SqlCommand("GetReports", connection);
             command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@ReportTypeId", reportTypeId);
+            command.Parameters.AddWithValue("@FromDate", fromDate);
+            command.Parameters.AddWithValue("@ToDate", toDate);
 
             return command.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
         }
