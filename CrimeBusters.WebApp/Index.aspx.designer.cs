@@ -58,22 +58,13 @@ namespace CrimeBusters.WebApp {
         protected global::System.Web.UI.WebControls.RadioButtonList CrimeTypeList;
         
         /// <summary>
-        /// SearchByDateButton control.
+        /// searchByDateButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SearchByDateButton;
-        
-        /// <summary>
-        /// SearchList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox SearchList;
+        protected global::System.Web.UI.WebControls.Button searchByDateButton;
         
         /// <summary>
         /// ResultLabel control.

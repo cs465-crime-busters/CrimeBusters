@@ -254,11 +254,16 @@ ul.uploadedMedia li {
 
 #lowerSection input#toDate,
 #lowerSection input#fromDate {
-    width: 100px;
+    width: 64px;
+    font-size: smaller;
+    border: 1px solid rgb(170, 170, 170);
 }
 
 #reportTypeSelection {
     display: inline;
+    position: relative;
+    top: 2px;
+    left: -10px;
 }
 
 a#signOut {
@@ -269,11 +274,41 @@ a#signOut {
     min-height: 138px;
 }
 
-#emergencies ul, #crimes ul {
+#emergencies ul, #crimes ul,
+#searchResultList ul {
     list-style: none;
     padding-left: 0;
 }
 
-#emergencies ul li a, #crimes ul li a {
+#searchResultList ul {
+    padding-left: 5px;
+}
+
+#emergencies ul li a, #crimes ul li a,
+#searchResultList ul li a {
     font-size: smaller;
+}
+
+.ui-button-text-only .ui-button-text,
+input.ui-button {
+    padding: 0.45em 1em;
+    font-size: smaller !important;
+}
+
+input#searchByDateButton {
+    position: relative;
+    top: -1px;
+    left: 48px;
+}
+
+#searchResultList {
+    height: 88px;
+    overflow: auto;
+    width: 415px;
+    border: 1px solid rgb(170, 170, 170);
+    background-color: white;
+}
+
+#search {
+    padding-bottom: 5px !important;
 }

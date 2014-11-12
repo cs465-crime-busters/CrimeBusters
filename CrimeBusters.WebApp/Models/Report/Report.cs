@@ -127,6 +127,8 @@ namespace CrimeBusters.WebApp.Models.Report
 
         public String CrimeType { get; set; }
 
+        public String Media1 { get; set; }
+
         /// <summary>
         /// Report Constructor
         /// </summary>
@@ -185,84 +187,9 @@ namespace CrimeBusters.WebApp.Models.Report
         /// Gets a list of reports from the database.
         /// </summary>
         /// <returns>The list of Report object.</returns>
-        public static List<Report> GetReports()
+        public static List<Report> GetReports(int reportTypeId, DateTime fromDate, DateTime toDate)
         {
-            SqlDataReader reader = ReportsDAO.GetReports();
-            List<Report> reports = new List<Report>();
-
-            try
-            {
-                int oReportId = reader.GetOrdinal("ReportId");
-                int oReportType = reader.GetOrdinal("ReportType");
-                int oMarkerImage = reader.GetOrdinal("MarkerImage");
-                int oMessage = reader.GetOrdinal("Message");
-                int oLatitude = reader.GetOrdinal("Latitude");
-                int oLongitude = reader.GetOrdinal("Longitude");
-                int oLocation = reader.GetOrdinal("Location");
-                int oTimeStamp = reader.GetOrdinal("TimeStamp");
-                int oUserName = reader.GetOrdinal("UserName");
-                int oFirstName = reader.GetOrdinal("FirstName");
-                int oLastName = reader.GetOrdinal("LastName");
-                int oGender = reader.GetOrdinal("Gender");
-                int oEmail = reader.GetOrdinal("Email");
-                int oPhoneNumber = reader.GetOrdinal("PhoneNumber");
-                int oAddress = reader.GetOrdinal("Address");
-                int oZipCode = reader.GetOrdinal("ZipCode");
-
-                while (reader.Read())
-                {
-                    Report report = new Report
-                    {
-                        ReportId = Convert.ToInt32(reader[oReportId]),
-                        ReportType = reader[oReportType].ToString(),
-                        MarkerImage = reader[oMarkerImage].ToString(),
-                        Message = reader[oMessage].ToString(),
-                        Latitude = reader[oLatitude].ToString(),
-                        Longitude = reader[oLongitude].ToString(),
-                        Location = reader[oLocation].ToString(),
-                        DateReported = Convert.ToDateTime(reader[oTimeStamp]),
-                        User = new User 
-                        {
-                            UserName = reader[oUserName].ToString(),
-                            FirstName = reader[oFirstName].ToString(),
-                            LastName = reader[oLastName].ToString(),
-                            Gender = reader[oGender].ToString(),
-                            Email = reader[oEmail].ToString(),
-                            PhoneNumber = reader[oPhoneNumber].ToString(),
-                            Address = reader[oAddress].ToString(),
-                            ZipCode = reader[oZipCode].ToString()
-                        }
-                    };
-
-                    for (int i = 1; i <= 5; i++)
-                    {
-                        String mediaUrl = reader["Media" + i].ToString();
-                        if (!String.IsNullOrEmpty(mediaUrl))
-                        {
-                            report.AddUrlList(mediaUrl);
-                        }
-                    }
-                    reports.Add(report);
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                reader.Close();
-            }
-            return reports;
-        }
-
-        /// <summary>
-        /// Gets a list of active reports from the database.
-        /// </summary>
-        /// <returns>The list of Report objects.</returns>
-        public static List<Report> GetActiveReports()
-        {
-            SqlDataReader reader = ReportsDAO.GetReports();
+            SqlDataReader reader = ReportsDAO.GetReports(reportTypeId, fromDate, toDate);
             List<Report> reports = new List<Report>();
 
             try
@@ -282,6 +209,75 @@ namespace CrimeBusters.WebApp.Models.Report
                 int oEmail = reader.GetOrdinal("Email");
                 int oPhoneNumber = reader.GetOrdinal("PhoneNumber");
                 int oCrimeType = reader.GetOrdinal("CrimeType");
+                int oMedia1 = reader.GetOrdinal("Media1");
+
+                while (reader.Read())
+                {
+                    Report report = new Report
+                    {
+                        ReportId = Convert.ToInt32(reader[oReportId]),
+                        ReportType = reader[oReportType].ToString(),
+                        ReportTypeId = (ReportTypeEnum)Convert.ToInt32(reader[oReportTypeId]),
+                        Message = reader[oMessage].ToString(),
+                        Latitude = reader[oLatitude].ToString(),
+                        Longitude = reader[oLongitude].ToString(),
+                        Location = reader[oLocation].ToString(),
+                        DateReported = Convert.ToDateTime(reader[oTimeStamp]),
+                        ContactMethodPref = reader[oContactMethodPref].ToString(),
+                        CrimeType = reader[oCrimeType].ToString(),
+                        Media1 = reader[oMedia1].ToString(),
+                        User = new User
+                        {
+                            UserName = reader[oUserName].ToString(),
+                            FirstName = reader[oFirstName].ToString(),
+                            LastName = reader[oLastName].ToString(),
+                            Email = reader[oEmail].ToString(),
+                            PhoneNumber = reader[oPhoneNumber].ToString()
+                        }
+                    };
+
+                    reports.Add(report);
+                }
+            }
+            catch (Exception ex)
+            {
+                String error = ex.Message;
+            }
+            finally
+            {
+                reader.Close();
+            }
+            return reports;
+
+        }
+
+        /// <summary>
+        /// Gets a list of active reports from the database.
+        /// </summary>
+        /// <returns>The list of Report objects.</returns>
+        public static List<Report> GetActiveReports()
+        {
+            SqlDataReader reader = ReportsDAO.GetActiveReports();
+            List<Report> reports = new List<Report>();
+
+            try
+            {
+                int oReportId = Convert.ToInt32(reader.GetOrdinal("ReportId"));
+                int oReportType = reader.GetOrdinal("Type");
+                int oReportTypeId = reader.GetOrdinal("ReportTypeId");
+                int oMessage = reader.GetOrdinal("Message");
+                int oLatitude = reader.GetOrdinal("Latitude");
+                int oLongitude = reader.GetOrdinal("Longitude");
+                int oLocation = reader.GetOrdinal("Location");
+                int oTimeStamp = reader.GetOrdinal("TimeStamp");
+                int oContactMethodPref = reader.GetOrdinal("ContactMethodPref");
+                int oUserName = reader.GetOrdinal("UserName");
+                int oFirstName = reader.GetOrdinal("FirstName");
+                int oLastName = reader.GetOrdinal("LastName");
+                int oEmail = reader.GetOrdinal("Email");
+                int oPhoneNumber = reader.GetOrdinal("PhoneNumber");
+                int oCrimeType = reader.GetOrdinal("CrimeType");
+                int oMedia1 = reader.GetOrdinal("Media1");
 
                 while (reader.Read())
                 {
@@ -297,6 +293,7 @@ namespace CrimeBusters.WebApp.Models.Report
                         DateReported = Convert.ToDateTime(reader[oTimeStamp]),
                         ContactMethodPref = reader[oContactMethodPref].ToString(),
                         CrimeType = reader[oCrimeType].ToString(),
+                        Media1 = reader[oMedia1].ToString(),
                         User = new User
                         {
                             UserName = reader[oUserName].ToString(),

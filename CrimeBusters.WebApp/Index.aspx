@@ -48,16 +48,16 @@
                             <input id="altFieldTo" type="hidden" />
                             <div id="reportTypeSelection">
                                 <asp:RadioButtonList ID="CrimeTypeList" runat="server" RepeatDirection="Horizontal" CssClass="radio-inline">
-                                    <asp:ListItem Selected="True">Emergency</asp:ListItem>
-                                    <asp:ListItem>Crime</asp:ListItem>
+                                    <asp:ListItem Selected="True" Value="1">Emergency</asp:ListItem>
+                                    <asp:ListItem Value="2">Crime</asp:ListItem>
                                 </asp:RadioButtonList>
-                            <%--
-                                <input id="highPriorityRadio" type="radio" name="reportType" value="emergency" checked="checked" /><label for="highPriorityRadio">Emergency</label>
-                                <input id="lowPriorityRadio" type="radio" name="reportType" value="crime" /><label for="lowPriorityRadio">Crime</label>
-                            --%>
+                            
+  <%--                              <input id="highPriorityRadio" type="radio" name="reportType" value="1" checked="checked" /><label for="highPriorityRadio">Emergency</label>
+                                <input id="lowPriorityRadio" type="radio" name="reportType" value="2" /><label for="lowPriorityRadio">Crime</label>--%>
+                            
                             </div>
-                            <asp:Button ID="SearchByDateButton" runat="server" Text="Search" OnClientClick="$.searchForCrimes()"  OnClick="GetReportsByDate"/><br />
-                            <asp:ListBox ID="SearchList" runat="server" Width="415"></asp:ListBox>
+                            <asp:Button ID="searchByDateButton" runat="server" Text="Search" /><br />
+                            <div id="searchResultList" class="roundCorners"><ul></ul></div>
                             
                             <input id="ShowOnMapButton" type="button" value="Show on Map" hidden="hidden" onclick="$.showOnMap()"/>
                             <asp:Label ID="ResultLabel" runat="server"></asp:Label>
@@ -77,12 +77,12 @@
                             <source src="/Content/uploads/TestVideo.mp4" type='video/webm' /> 
                         Your browser does not support the video tag.</video>--%>
 
-                        <audio controls>
+<%--                        <audio controls>
                             <source src="/Content/uploads/testAudio.ogg" type="audio/mp3" />
                             <source src="/Content/uploads/testAudio.ogg" type="audio/ogg" />
                             <source src="/Content/uploads/testAudio.ogg"  type="audio/mpeg" />
                             Your browser does not support the audio element.
-                        </audio>
+                        </audio>--%>
                     </div>
                 </div>
             </div>
