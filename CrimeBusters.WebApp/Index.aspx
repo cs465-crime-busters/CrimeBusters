@@ -77,12 +77,12 @@
                             <source src="/Content/uploads/TestVideo.mp4" type='video/webm' /> 
                         Your browser does not support the video tag.</video>--%>
 
-                        <audio controls>
+<%--                        <audio controls>
                             <source src="/Content/uploads/testAudio.ogg" type="audio/mp3" />
                             <source src="/Content/uploads/testAudio.ogg" type="audio/ogg" />
                             <source src="/Content/uploads/testAudio.ogg"  type="audio/mpeg" />
                             Your browser does not support the audio element.
-                        </audio>
+                        </audio>--%>
                     </div>
                 </div>
             </div>

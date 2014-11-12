@@ -126,9 +126,8 @@ $(function () {
         $.zoomUser(map, $(this).attr("data-markerId"), $(this).attr("data-reportType"));
 
         var mediaUrl = $(this).attr("data-mediaUrl");
-        if (mediaUrl != "") {
-            $.showPreview(mediaUrl);
-        }
+        $.showPreview(mediaUrl);
+       
     });
 
     $("input#searchByDateButton").on("click", function(e) {
