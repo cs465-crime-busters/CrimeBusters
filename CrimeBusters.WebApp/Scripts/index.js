@@ -7,7 +7,8 @@ var search = false;
 $(function () {
     var map = $.getMap();
     $("#searchPanel").tabs();
-	$.plotUsersOnMap(map); 
+	$.plotUsersOnMap(map);
+
 
     $("input#fromDate").datepicker({
         altField: "#altFieldFrom",
@@ -105,8 +106,24 @@ $(function () {
     $(document).on("click", "a.ackReport", function(e) {
         e.preventDefault();
 
+        $(this).text("Acknowledging Report...");
+
         var reportId = $(this).attr("data-reportId");
         $.acknowledgeReport(reportId);
+    });
+
+    $(document).on("click", "a.closeReport", function (e) {
+        e.preventDefault();
+
+        var reportId = $(this).attr("data-reportId");
+        $.closeReport(reportId);
+    });
+
+
+    $(document).on("click", "a.reports", function(e) {
+        e.preventDefault();
+
+        $.zoomUser(map, $(this).attr("data-markerId"), $(this).attr("data-reportType"));
     });
 });
 
@@ -165,8 +182,9 @@ $(function () {
 	                    animation: google.maps.Animation.BOUNCE
 	                });
 	                marker.markerId = index;
+	                reports[index].markerId = index;
 
-	                if (this.ReportType == "HIGH") {
+	                if (this.ReportTypeId == 1) {
 	                    hiMarkers.push(marker);
 	                } else {
 	                    loMarkers.push(marker);
@@ -199,15 +217,20 @@ $(function () {
                                             "<li>Phone Number: " + phoneNumber + "</li>" +
                                             "<li>Preferred Contact Method: " + contactMethodPref + "</li>" +
                                             "<li>Report Type: " + this.ReportType + "</li>" +
+                                            "<li>Crime Type: " + this.CrimeType + "</li>" +
                                             "<li>Message: " + this.Message + "</li>" +
                                             "<li>Date Reported: " + tst.toLocaleString() + "</li>" +
                                             "<li>GPS Coordinates: " + marker.getPosition().toString() + "</li>" +
                                             "<li>Location: " + this.Location + "</li>" +
                                         "</ul>" +
-                                  "<a href='#' class='ackReport' data-reportId='" + this.ReportId + "'>Acknowledge Report</a></div>";
+                                  "<div style='text-align: right'><a href='#' class='ackReport' data-reportId='" + this.ReportId + "'>Acknowledge Report</a> | " +
+                                  "<a href='#' class='closeReport' data-reportId='" + this.ReportId + "'>Set Report as Inactive</a></div>" +
+                                  "</div>";
 
 	                $.attachInfo(map, content, marker);
 	            });
+
+	            $.showCrimesAndEmergencies(1);
 	        },
 	        error: function (xhr, textStatus, errorThrown) {
 	            alert("Error: " + errorThrown);
@@ -275,6 +298,44 @@ $(function () {
 	        }
 	    });
     };
+
+    $.showCrimesAndEmergencies = function (pageNumber) {
+        for (var i = (pageNumber - 1) * 10; i < pageNumber * 10; i++) {
+            var subReport = reports[i];
+
+            if (subReport == null) {
+                break;
+            }
+            // Shows the local time in the browser.
+            // workaround for Safari
+            var s = (subReport.TimeStampString + "Z").split(/[^0-9]/);
+            var tst = new Date(s[2], s[0] - 1, s[1], s[3], s[4], s[5], 0);
+            var offset = -((new Date()).getTimezoneOffset() / 60);
+            tst.setHours(tst.getHours() + offset);
+
+            var noLocMediaUrls = "";
+            if (isNaN(parseFloat(subReport.Latitude)) && subReport.UrlList.length != 0) {
+                for (var j in subReport.UrlList) {
+                    noLocMediaUrls += "<input type='hidden' data-mediaUrl='" + subReport.UrlList[j] + "' />";
+                }
+            }
+
+            var location = subReport.Location;
+
+            if (location == "") {
+                location = "Unknown Location";
+            }
+
+            if (subReport.ReportTypeId == 1) {
+                $("ul", "#emergencies").append("<li><a class='reports' href='#' data-reportType='EMERGENCY' data-markerId='" + subReport.markerId
+                    + "'>Emergency on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
+            } else {
+                $("ul", "#crimes").append("<li><a class='reports' href='#' data-reportType='CRIME' data-markerId='" + subReport.markerId
+                    + "'>Crime on <em>" + location + "</em> at " + tst.toLocaleString() + "</a></li>");
+            }
+        }
+    }
+
 
     //show reports on dashboard given the page number
     $.showReports = function(pageNumber) {
@@ -402,7 +463,7 @@ $(function () {
     };
 
     $.zoomUser = function (map, markerId, reportType) {
-        if (reportType == "HIGH") {
+        if (reportType == "EMERGENCY") {
             var userIndex = $.binarySearch(hiMarkers, markerId, 0, hiMarkers.length - 1);
 
             if (userIndex != -1) {
@@ -455,9 +516,6 @@ $(function () {
             return -1;
         } else {
             var imid = $.midpoint(imin, imax);
-
-            var 
-            deleteThis = markers[imid].markerId;
 
             if (markers[imid].markerId > key) {
                 return $.binarySearch(markers, key, imin, imid - 1);
@@ -513,9 +571,33 @@ $(function () {
             timeout: 10000,
             contentType: "application/json",
             url: "../Services/PushNotification.asmx/AcknowledgeReport",
-            success: function (data) {
+            success: function(data) {
                 if (data.d == "success") {
                     alert("Acknowledgement sent.");
+                } else {
+                    alert(data.d);
+                }
+            },
+            error: function() {
+                alert("Unable to communicate with the server. Please try again.");
+            },
+            complete: function() {
+                $("a.ackReport").text("Acknowledge Report");
+            }
+        });
+    };
+
+    $.closeReport = function (reportId) {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            data: JSON.stringify({ "reportId": reportId, "isActive": false }),
+            timeout: 10000,
+            contentType: "application/json",
+            url: "../Services/Index.asmx/UpdateIsActive",
+            success: function (data) {
+                if (data.d == "success") {
+                    alert("Report Deactivated.");
                 } else {
                     alert(data.d);
                 }

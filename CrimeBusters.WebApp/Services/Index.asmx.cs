@@ -35,5 +35,11 @@ namespace CrimeBusters.WebApp.Services
         {
             return Report.GetActiveReports();
         }
+
+        [WebMethod]
+        public String UpdateIsActive(int reportId, bool isActive)
+        {
+            return Report.UpdateIsActive(reportId, isActive);
+        }
     }
 }
