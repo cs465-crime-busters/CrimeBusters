@@ -391,10 +391,10 @@ $(function () {
 
         if ($.isImage(mediaUrl)) {
             $("#previewPanel").append(
-                "<img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' height='400' width='300' />");
+                "<img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' height='175' width='430' />");
         } else if ($.isVideo(mediaUrl)) {
             $("#previewPanel").append(
-                "<video width='320' height='240' controls>" +
+                "<video width='430' height='170' controls>" +
                     "<source src='" + mediaUrl.substr(2) + "' type='video/mp4' />" +
                     "<source src='" + mediaUrl.substr(2) + "' type='video/ogg' />" +
                     "<source src='" + mediaUrl.substr(2) + "' type='video/webm' />" +
@@ -489,7 +489,7 @@ $(function () {
                     "<li><img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' height='400' width='300' /></li>");
             } else if ($.isVideo(mediaUrl)) {
                 $("ul.uploadedMedia", "#uploadedMediaWindow").append(
-                    "<video width='320' height='240' controls>" +
+                    "<video width='463' height='240' controls>" +
                         "<source src='" + mediaUrl.substr(2) + "' type='video/mp4' />" +
                         "<source src='" + mediaUrl.substr(2) + "' type='video/ogg' />" +
                         "<source src='" + mediaUrl.substr(2) + "' type='video/webm' />" +
