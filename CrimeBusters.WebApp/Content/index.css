@@ -271,7 +271,8 @@ a#signOut {
 }
 
 #emergencies, #crimes, #search {
-    min-height: 138px;
+    height: 138px;
+    overflow: auto;
 }
 
 #emergencies ul, #crimes ul,
@@ -311,4 +312,10 @@ input#searchByDateButton {
 
 #search {
     padding-bottom: 5px !important;
+}
+
+#previewPanel {
+    height: 177px;
+    overflow: auto;
+    text-align: center;
 }

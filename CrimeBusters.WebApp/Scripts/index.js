@@ -314,7 +314,7 @@ $(function () {
     };
 
     $.showCrimesAndEmergencies = function (pageNumber) {
-        for (var i = (pageNumber - 1) * 10; i < pageNumber * 10; i++) {
+        for (var i = (pageNumber - 1) * 100; i < pageNumber * 100; i++) {
             var subReport = reports[i];
 
             if (subReport == null) {

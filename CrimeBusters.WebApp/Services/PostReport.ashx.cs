@@ -45,6 +45,20 @@ namespace CrimeBusters.WebApp.Services
                 };
                 AddMedia(report, photo, video, audio);
 
+                //jsonString = serializer.Serialize(
+                //    new { result = String.Format("reportTypeId: {0}, lat: {1}, long: {2}, location: {3}, timeStamp: {4}, username: {5}, desc: {6}, pushId: {7}, contactMethodPref: {8}, crimeType: {9}",
+                //        (ReportTypeEnum)Int16.Parse(request.Form["reportTypeId"]),
+                //        request.Form["lat"],
+                //        request.Form["lng"],
+                //        request.Form["location"],
+                //        Convert.ToDateTime(request.Form["timeStamp"]),
+                //        request.Form["userName"],
+                //        request.Form["desc"],
+                //        request.Form["pushId"],
+                //        request.Form["contactMethodPref"],
+                //        request.Form["crimeType"]
+                //        ) });
+
                 jsonString = serializer.Serialize(
                     new { result = report.CreateReport(new WebContentLocator()) });
             }
