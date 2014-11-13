@@ -25,7 +25,7 @@
             </div>
             <div id="map"></div>
             <div id="lowerSection">
-                <div id="mainSearch">
+                <div id="mainSearch" title="Click on a crime report to zoom to it on the map">
                     <h6 class="roundCorners">Events & Search</h6>
                     <div id="searchPanel">
                         <ul>
