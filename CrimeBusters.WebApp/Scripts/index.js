@@ -134,10 +134,12 @@ $(function () {
         e.preventDefault();
 
         var reportTypeId = $("input[name='CrimeTypeList']:checked").val();
+
+        var offset = -((new Date()).getTimezoneOffset() / 60);
         var fromDateString = $("input#altFieldFrom").val();
         var toDateString = $("input#altFieldTo").val();
-
-        $.getReportsFromSearch(reportTypeId, fromDateString, toDateString);
+        
+        $.getReportsFromSearch(reportTypeId, fromDateString, toDateString, offset);
     });
 });
 
@@ -223,7 +225,7 @@ $(function () {
 	                    contactMethodPref = "anonymous";
 	                }
 
-	                var content = "<div id='markerPopup'>" +
+	                var content = "<div id='markerPopup' class='markerPopup'>" +
                                         "<h5>Report Details</h5>" +
                                         "<ul>" +
                                             "<li>Reported By: " + fullName + "</li>" +
@@ -350,11 +352,11 @@ $(function () {
         }
     }
 
-    $.getReportsFromSearch = function(reportTypeId, fromDateString, toDateString) {
+    $.getReportsFromSearch = function(reportTypeId, fromDateString, toDateString, offset) {
         $.ajax({
             type: "POST",
             dataType: "json",
-            data: JSON.stringify({ "reportTypeId": reportTypeId, "fromDate": fromDateString, "toDate": toDateString }),
+            data: JSON.stringify({ "reportTypeId": reportTypeId, "fromDate": fromDateString, "toDate": toDateString, "offset": offset }),
             timeout: 10000,
             contentType: "application/json",
             url: "../Services/Index.asmx/GetReports",
@@ -391,7 +393,7 @@ $(function () {
 
         if ($.isImage(mediaUrl)) {
             $("#previewPanel").append(
-                "<img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' height='175' width='430' />");
+                "<img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' />");
         } else if ($.isVideo(mediaUrl)) {
             $("#previewPanel").append(
                 "<video width='430' height='170' controls>" +
@@ -486,7 +488,7 @@ $(function () {
             var mediaUrl = $(this).attr("data-mediaUrl");
             if ($.isImage(mediaUrl)) {
                 $("ul.uploadedMedia", "#uploadedMediaWindow").append(
-                    "<li><img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' height='400' width='300' /></li>");
+                    "<li><img src='" + mediaUrl.substr(2) + "' alt='Uploaded Image' /></li>");
             } else if ($.isVideo(mediaUrl)) {
                 $("ul.uploadedMedia", "#uploadedMediaWindow").append(
                     "<video width='463' height='240' controls>" +

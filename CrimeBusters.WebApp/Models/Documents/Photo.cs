@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Web;
 using CrimeBusters.WebApp.Models.Util;
@@ -50,8 +51,15 @@ namespace CrimeBusters.WebApp.Models.Documents
                 throw new Exception("Invalid file type. Can only accept gif, png, jpg and jpeg extensions.");
             }
 
-            String filePath = contentLocator.GetPath(this.Url);
-            this.File.SaveAs(filePath);
+            var resizer = new ImageResizer();
+            var image =
+                resizer.ResizeImage(Image.FromStream(File.InputStream), 430, 240);
+
+            using (new MemoryStream())
+            {
+                var filePath = contentLocator.GetPath(this.Url);
+                image.Save(filePath);
+            }
         }
     }
 }

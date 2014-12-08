@@ -22,7 +22,7 @@ namespace CrimeBusters.WebApp.Services
             HttpRequest request = context.Request;
             HttpResponse response = context.Response;
             String jsonString = String.Empty;
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            var serializer = new JavaScriptSerializer();
 
             try
             {

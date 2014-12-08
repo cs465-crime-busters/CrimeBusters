@@ -319,3 +319,15 @@ input#searchByDateButton {
     overflow: auto;
     text-align: center;
 }
+
+.markerPopup {
+    width: 480px;
+}
+
+a.reports:link {
+    color: blue;
+}
+
+a:link:hover {
+    color: orange;
+}
